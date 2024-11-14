@@ -2,8 +2,9 @@ import { BrowserRouter } from "react-router-dom"
 import {
   About, Contact, Experience,
   // Feedbacks,
-  Hero, Navbar, Tech, Works, StarsCanvas
+  Hero, Navbar, Tech, Works, StarsCanvas,
 } from './components'
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+          <Footer/>
         </div>
      </div>
    </BrowserRouter>
