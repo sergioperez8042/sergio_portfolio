@@ -38,12 +38,10 @@ const About = () => {
         max-w-3xl leading-[30px]
         '
       >
-        I am a Frontend Developer with 2 years of experience in creating web applications and interfaces.
-        I am passionate about creating responsive and user-friendly websites.
-        I have experience working with React, Redux, Tailwind CSS, and Framer Motion.
-        I am always eager to learn new technologies and improve my skills.
-        I am currently looking for new opportunities to work on exciting projects and collaborate with talented individuals.
-
+💻 Frontend Developer | Specialized in React, Next.js, and React Native
+        I am a frontend developer experienced in creating functional user interfaces and implementing logic for web and mobile applications.
+        I have worked on various projects using Next.js and React Native,
+        handling tasks such as application refactoring, global state management, database integration, and compiling apps for Android and iOS, always focusing on optimizing user experience and development efficiency.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'> 
         {services.map((service, index) => (

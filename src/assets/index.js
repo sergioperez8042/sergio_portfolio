@@ -25,17 +25,25 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
+import octupus from "./company/octupus.png";
+import soaint from "./company/soaint.png";
+import mome from "./company/mome.png";
 import carrent from "./carrent.png";
+import nextjslogo from "./nextjslogo.png";
+import webdevelopment from "./webdevelopment.png";
 import jobit from "./jobit.png";
+import reactnative from "./reactnative.png";
 import tripguide from "./tripguide.png";
 
 export {
   logo,
   backend,
   creator,
+  reactnative,
+  webdevelopment,
   mobile,
   web,
+  nextjslogo,
   github,
   menu,
   close,
@@ -56,6 +64,9 @@ export {
   shopify,
   starbucks,
   tesla,
+  octupus,
+  soaint,
+  mome,
   carrent,
   jobit,
   tripguide,

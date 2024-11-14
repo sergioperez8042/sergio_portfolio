@@ -1,8 +1,8 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  // mobile,
+  // backend,
+  // creator,
+  webdevelopment,
   javascript,
   typescript,
   html,
@@ -11,18 +11,23 @@ import {
   redux,
   tailwind,
   nodejs,
-  mongodb,
+  // mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  // docker,
+  // meta,
+  octupus,
+  soaint,
+  mome,
+  // tesla,
+  // shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  nextjslogo,
+  reactnative,
+  github,
 } from "../assets";
 
 export const navLinks = [
@@ -43,20 +48,24 @@ export const navLinks = [
 const services = [
   {
     title: "Web Developer",
-    icon: web,
+    icon: webdevelopment,
+  },
+  {
+    title: "React Developer",
+    icon: reactjs,
   },
   {
     title: "React Native Developer",
-    icon: mobile,
+    icon: reactnative,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Nextjs Developer",
+    icon: nextjslogo,
   },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  // {
+  //   title: "Content Creator",
+  //   icon: creator,
+  // },
 ];
 
 const technologies = [
@@ -93,8 +102,8 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Github",
+    icon: github,
   },
   {
     name: "Three JS",
@@ -108,65 +117,57 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Nextjs Developer",
+    company_name: "Octupus",
+    icon: octupus,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "August 2023 - October 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I developed and integrated management systems and e-commerce platforms using Next.js as the frontend and Odoo as the backend, achieving intuitive and complex user interfaces with a UX/UI focus to enhance navigability and user experience. I configured custom modules in Odoo, automating critical processes and establishing seamless communication through APIs to connect Odoo with Next.js, enabling a more interactive and accessible user experience. In e-commerce development, I created optimized shopping experiences, including product catalogs, shopping carts, secure payment systems, and SEO strategies to improve visibility and customer engagement. I coordinated multiple projects, applying agile methodologies to ensure timely deliveries at each phase, implementing continuous improvements and code optimizations to ensure long-term scalability and efficiency, meeting client expectations and future growth demands.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "React Developer",
+    company_name: "MOME",
+    icon: mome,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jun 2021 - Jul 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I contributed to the development of a communication system for ad sales platforms, enhancing user interaction and improving the efficiency of online ad management. I was involved in designing and developing key features to ensure an intuitive and seamless user experience. The technologies utilized included Next.js for building a fast and efficient interface, React as the foundation for creating reusable and responsive components, JavaScript and TypeScript for secure and structured frontend programming, Node.js for backend and API development for data integrations, CSS and Styled Components for visual design and interface customization, and RESTful APIs for efficient communication between the system's frontend and backend.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "React Native Developer & React Developer",
+    company_name: "Soaint",
+    icon: soaint,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Oct 2022 - Abr 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "During the refactoring and updating of the mobile application, I undertook a comprehensive overhaul of the user interface, enhancing navigation and interaction. Key components of the app were redesigned to improve fluidity and accessibility, ensuring users could quickly and clearly find the functions they needed. Additionally, I developed new features that added value to the user experience, providing additional tools that increased the app's appeal and utility.",
     ],
   },
+
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
