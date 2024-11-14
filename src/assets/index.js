@@ -29,7 +29,7 @@ import octupus from "./company/octupus.png";
 import soaint from "./company/soaint.png";
 import mome from "./company/mome.png";
 import carrent from "./carrent.png";
-import nextjsLogoo from "./nextjsLogoo.png";
+import nextjsLogo from "./nextjsLogo.png";
 import webdevelopment from "./webdevelopment.png";
 import jobit from "./jobit.png";
 import reactnative from "./reactnative.png";
@@ -43,7 +43,7 @@ export {
   webdevelopment,
   mobile,
   web,
-  nextjsLogoo,
+  nextjsLogo,
   github,
   menu,
   close,
