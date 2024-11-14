@@ -25,7 +25,7 @@ import {
   jobit,
   tripguide,
   threejs,
-  nextjslogo,
+  nextjsLogoo,
   reactnative,
   github,
 } from "../assets";
@@ -60,7 +60,7 @@ const services = [
   },
   {
     title: "Nextjs Developer",
-    icon: nextjslogo,
+    icon: nextjsLogoo,
   },
   // {
   //   title: "Content Creator",
