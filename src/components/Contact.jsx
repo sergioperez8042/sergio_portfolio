@@ -16,7 +16,7 @@ const Contact = () => {
     email: '',
     message: ''
   })
-  //test
+  
   const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => { 
