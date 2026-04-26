@@ -87,7 +87,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 pt-6 sm:pt-7 text-[12px] text-secondary">
           <span className="leading-relaxed">{f.copyright}</span>
           <SocialIcons size="sm" className="hidden md:flex" />
-          <span className="text-[11px] opacity-60">Made in Madrid</span>
+          <span className="text-[11px] opacity-60">Made in Burgos</span>
         </div>
       </div>
     </footer>

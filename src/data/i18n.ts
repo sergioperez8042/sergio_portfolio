@@ -67,7 +67,6 @@ export const content = {
         { num: "3", plus: "", lbl: "regiones (ES · EAU · LATAM)" },
         { num: "98", plus: "", lbl: "Lighthouse promedio" },
       ],
-      scrollHint: "Desliza",
     },
     marquee: [
       "Frontend Architecture",
@@ -82,14 +81,14 @@ export const content = {
     about: {
       eyebrow: "Sobre mí",
       title: "De requisitos de cliente a código que rinde.",
-      photoTag: "Madrid · 2026",
+      photoTag: "2026",
       paragraphs: [
         "Trabajo en la intersección entre <b>código y negocio</b>. Lidero el roadmap del equipo en <b>ITConsulting Global</b> y entrego features que rinden en producción — no demos bonitas, código que aguanta el tráfico real.",
         "En los últimos 5 años he desplegado plataformas e-commerce, dashboards operativos, integraciones MCP/Odoo, apps móviles y portales corporativos para sectores como <b>hotelería, fintech, retail y consultoría enterprise</b> en España, EAU y LATAM.",
         "Si tienes una idea que necesita pasar de prototipo a producto en producción — o un sistema legacy que pide refactor sin romper el negocio — eso es exactamente en lo que trabajo cada día.",
       ],
       meta: [
-        { lbl: "Base", val: "Madrid, España" },
+        { lbl: "Base", val: "Burgos, España" },
         { lbl: "Idiomas", val: "Español · English" },
         { lbl: "Modalidad", val: "Remoto / Híbrido" },
         { lbl: "Disponible", val: "Q2 2026" },
@@ -373,7 +372,7 @@ export const content = {
         {
           icon: "pin",
           lbl: "Ubicación",
-          val: "Madrid · Remoto worldwide",
+          val: "Burgos · Remoto worldwide",
         },
         { icon: "clock", lbl: "Disponibilidad", val: "Q2 2026 — abierto" },
       ],
@@ -398,7 +397,7 @@ export const content = {
     },
     footer: {
       tagline:
-        "Frontend Developer & Project Manager. Construyendo desde Madrid para clientes en ES · EAU · LATAM.",
+        "Frontend Developer & Project Manager. Construyendo desde Burgos para clientes en ES · EAU · LATAM.",
       cols: [
         {
           title: "Navegación",
@@ -461,7 +460,6 @@ export const content = {
         { num: "3", plus: "", lbl: "regions (ES · UAE · LATAM)" },
         { num: "98", plus: "", lbl: "average Lighthouse" },
       ],
-      scrollHint: "Scroll",
     },
     marquee: [
       "Frontend Architecture",
@@ -476,14 +474,14 @@ export const content = {
     about: {
       eyebrow: "About",
       title: "From client requirements to code that performs.",
-      photoTag: "Madrid · 2026",
+      photoTag: "2026",
       paragraphs: [
         "I work at the intersection of <b>code and business</b>. I lead the team's roadmap at <b>ITConsulting Global</b> and ship features that perform in production — not pretty demos, code that holds under real traffic.",
         "Over the last 5 years I've shipped e-commerce platforms, ops dashboards, MCP/Odoo integrations, mobile apps and corporate portals across <b>hospitality, fintech, retail and enterprise consulting</b> in Spain, the UAE and LATAM.",
         "If you have an idea that needs to move from prototype to production — or a legacy system asking for a refactor without breaking the business — that's exactly what I do every day.",
       ],
       meta: [
-        { lbl: "Base", val: "Madrid, Spain" },
+        { lbl: "Base", val: "Burgos, Spain" },
         { lbl: "Languages", val: "Spanish · English" },
         { lbl: "Setup", val: "Remote / Hybrid" },
         { lbl: "Available", val: "Q2 2026" },
@@ -765,7 +763,7 @@ export const content = {
         {
           icon: "pin",
           lbl: "Location",
-          val: "Madrid · Remote worldwide",
+          val: "Burgos · Remote worldwide",
         },
         { icon: "clock", lbl: "Availability", val: "Q2 2026 — open" },
       ],
@@ -790,7 +788,7 @@ export const content = {
     },
     footer: {
       tagline:
-        "Frontend Developer & Project Manager. Building from Madrid for clients across ES · UAE · LATAM.",
+        "Frontend Developer & Project Manager. Building from Burgos for clients across ES · UAE · LATAM.",
       cols: [
         {
           title: "Navigation",

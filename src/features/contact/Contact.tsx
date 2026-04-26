@@ -15,9 +15,11 @@ const ICONS = { mail: Mail, pin: MapPin, clock: Clock } as const;
 export function Contact() {
   const { t } = useTranslation();
   const c = t.contact;
-  const { form, status, handleChange, handleSubmit } = useContactForm();
-  const isSubmitting = status === "submitting";
   const [intent, setIntent] = useState<string | null>(null);
+  const { form, status, handleChange, handleSubmit } = useContactForm({
+    intent,
+  });
+  const isSubmitting = status === "submitting";
 
   return (
     <section

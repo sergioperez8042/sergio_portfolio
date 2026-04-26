@@ -422,29 +422,6 @@ a {
 }
 
 /* ============================================================
-   SCROLL CUE
-   ============================================================ */
-
-.scroll-cue-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(180deg, var(--color-secondary), transparent);
-  animation: cue 2s ease-in-out infinite;
-}
-@keyframes cue {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scaleY(0.6);
-    transform-origin: top;
-  }
-  50% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
-/* ============================================================
    CANVAS LOADER (R3F)
    ============================================================ */
 

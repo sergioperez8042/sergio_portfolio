@@ -18,7 +18,16 @@ const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
-export function useContactForm() {
+const TO_NAME = "Sergio";
+const TO_EMAIL = "8042sergi@gmail.com";
+
+export type UseContactFormOptions = {
+  /** Texto seleccionado del intent picker. Se envía como variable {{intent}}. */
+  intent?: string | null;
+};
+
+export function useContactForm(options: UseContactFormOptions = {}) {
+  const { intent } = options;
   const [form, setForm] = useState<FormState>(initialForm);
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -53,10 +62,18 @@ export function useContactForm() {
           TEMPLATE_ID,
           {
             from_name: form.name,
-            to_name: "Sergio",
             from_email: form.email,
-            to_email: "8042sergi@gmail.com",
+            to_name: TO_NAME,
+            to_email: TO_EMAIL,
+            reply_to: form.email,
             message: form.message,
+            intent: intent ?? "Sin especificar",
+            sent_at: new Date().toLocaleString("es-ES", {
+              dateStyle: "full",
+              timeStyle: "short",
+            }),
+            site_url:
+              typeof window !== "undefined" ? window.location.origin : "",
           },
           { publicKey: PUBLIC_KEY },
         );
@@ -69,7 +86,7 @@ export function useContactForm() {
         toast.error("Algo salió mal. Inténtalo más tarde.");
       }
     },
-    [form],
+    [form, intent],
   );
 
   return { form, status, handleChange, handleSubmit };

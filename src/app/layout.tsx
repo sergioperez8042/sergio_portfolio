@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s · Sergio Rodríguez",
   },
   description:
-    "Frontend Developer & Project Manager con 5+ años entregando producto en producción. Especializado en React, Next.js, React Native, TypeScript, Three.js y Odoo. Madrid · Remoto worldwide.",
+    "Frontend Developer & Project Manager con 5+ años entregando producto en producción. Especializado en React, Next.js, React Native, TypeScript, Three.js y Odoo. Burgos · Remoto worldwide.",
   applicationName: "Sergio Portfolio",
   category: "Technology",
   classification: "Personal Portfolio",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     // Personal
     "Sergio Rodríguez",
     "Sergio Carlos Rodríguez Pérez",
-    "Frontend Developer Madrid",
+    "Frontend Developer Burgos",
     "Project Manager Frontend",
     "Frontend Developer España",
     "ITConsulting Global",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     "Auditoría frontend",
     "Diseño de sistema",
     // Locations
-    "Madrid",
+    "Burgos",
     "España",
     "EAU",
     "LATAM",
@@ -176,7 +176,7 @@ const personSchema = {
   knowsLanguage: ["es", "en"],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Madrid",
+    addressLocality: "Burgos",
     addressCountry: "ES",
   },
   sameAs: [

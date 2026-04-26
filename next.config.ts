@@ -83,6 +83,20 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // PDFs: forzar descarga (no abrir in-line) y caché razonable
+      {
+        source: "/:path*.pdf",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "attachment",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, must-revalidate",
+          },
+        ],
+      },
     ];
   },
 };

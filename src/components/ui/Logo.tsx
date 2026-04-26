@@ -1,59 +1,94 @@
+import { useId } from "react";
+
 type LogoProps = {
   size?: number;
   className?: string;
-  /** Si true, omite el punto de marca (útil para favicon más limpio) */
-  bare?: boolean;
 };
 
 /**
- * Logotipo de Sergio Rodríguez.
+ * Logotipo Sergio · "Glass S".
  *
- * Monograma "S" monoline + punto de marca. Construido con dos arcos
- * cuadráticos que dibujan una S geométrica con stroke-linecap rounded
- * y un círculo pequeño debajo a la derecha (como un "Sergio.").
+ * Tile de cristal redondeado (rx=14) con dos diagonales sutiles
+ * que evocan refracción, monograma "S" monoline y punto de marca.
+ * Gradientes alineados al design system (white → #c5cad4).
  *
- * Gradiente: chrome (white → silver) heredado del design system.
- * Funciona a 16px (favicon) y escala infinitamente.
+ * Usa React.useId() para namespacear los <linearGradient> internos
+ * y evitar colisiones cuando se renderizan múltiples instancias.
  */
-export function Logo({ size = 28, className, bare = false }: LogoProps) {
-  const id = "logo-chrome";
+export function Logo({ size = 32, className }: LogoProps) {
+  const uid = useId();
+  const tileId = `logo-tile-${uid}`;
+  const strokeId = `logo-stroke-${uid}`;
+
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      viewBox="0 0 32 32"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      fill="none"
+      role="img"
+      aria-label="Sergio"
       className={className}
-      aria-hidden="true"
-      focusable="false"
     >
       <defs>
-        <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#f5f5f7" />
-          <stop offset="100%" stopColor="#c5cad4" />
+        <linearGradient
+          id={tileId}
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="64"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.18" />
+          <stop offset="1" stopColor="#ffffff" stopOpacity="0.04" />
+        </linearGradient>
+        <linearGradient
+          id={strokeId}
+          x1="0"
+          y1="0"
+          x2="0"
+          y2="64"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#ffffff" stopOpacity="1" />
+          <stop offset="1" stopColor="#c5cad4" stopOpacity="0.85" />
         </linearGradient>
       </defs>
 
-      {/* "S" monoline construida con tres curvas */}
+      {/* Tile cristal */}
+      <rect
+        x="2"
+        y="2"
+        width="60"
+        height="60"
+        rx="14"
+        fill={`url(#${tileId})`}
+        stroke="#ffffff"
+        strokeOpacity="0.28"
+        strokeWidth="1"
+      />
+
+      {/* Diagonales de refracción */}
       <path
-        d="M22 9
-           C 22 5.5, 19 4, 16 4
-           C 12 4, 9.5 6, 9.5 9
-           C 9.5 12, 12 13.5, 16 14.5
-           C 20 15.5, 22.5 17, 22.5 20
-           C 22.5 23, 20 25, 16 25
-           C 13 25, 10 23.5, 9.5 21"
-        stroke={`url(#${id})`}
-        strokeWidth="3"
+        d="M2 14 L14 2 M62 50 L50 62"
+        stroke="#ffffff"
+        strokeOpacity="0.18"
+        strokeWidth="1"
+      />
+
+      {/* Monograma S */}
+      <path
+        d="M44 18 L44 15 Q44 12 41 12 L24 12 Q18 12 18 18 L18 27 Q18 33 24 33 L40 33 Q46 33 46 39 L46 49 Q46 52 43 52 L20 52"
+        stroke={`url(#${strokeId})`}
+        strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
 
-      {/* Punto de marca: "Sergio." */}
-      {bare ? null : (
-        <circle cx="26" cy="25" r="1.6" fill={`url(#${id})`} />
-      )}
+      {/* Punto de marca */}
+      <circle cx="50" cy="14" r="1.6" fill="#c5cad4" />
     </svg>
   );
 }

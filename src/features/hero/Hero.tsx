@@ -74,7 +74,8 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
               <a
-                href="#contact"
+                href="/sergio-rodriguez-cv.pdf"
+                download="sergio-rodriguez-cv.pdf"
                 className="inline-flex items-center gap-2.5 px-5 py-3.5 text-[14px] font-semibold rounded-full glass text-white-100 hover:bg-white/[0.07] transition-all"
               >
                 <Download className="w-4 h-4" aria-hidden="true" />
@@ -90,14 +91,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll cue */}
-      <div
-        className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-secondary text-[11px] tracking-[0.18em] uppercase"
-        aria-hidden="true"
-      >
-        <span>{t.hero.scrollHint}</span>
-        <span className="scroll-cue-line" />
-      </div>
     </section>
   );
 }
