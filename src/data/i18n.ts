@@ -175,7 +175,7 @@ export const content = {
           items: [
             { name: "Node.js", slug: "nodedotjs" },
             { name: "Python", slug: "python" },
-            { name: "Odoo 18", slug: "odoo" },
+            { name: "Odoo", slug: "odoo" },
             { name: "PostgreSQL", slug: "postgresql" },
             { name: "Supabase", slug: "supabase" },
           ],
@@ -509,7 +509,7 @@ export const content = {
           items: [
             { name: "Node.js", slug: "nodedotjs" },
             { name: "Python", slug: "python" },
-            { name: "Odoo 18", slug: "odoo" },
+            { name: "Odoo", slug: "odoo" },
             { name: "PostgreSQL", slug: "postgresql" },
             { name: "Supabase", slug: "supabase" },
           ],
