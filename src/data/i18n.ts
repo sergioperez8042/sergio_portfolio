@@ -29,15 +29,6 @@ export type CaseStep = {
   list?: string[];
 };
 
-export type Post = {
-  feat: boolean;
-  cat: string;
-  date: string;
-  read: string;
-  title: string;
-  excerpt: string;
-};
-
 export const LANGS: Lang[] = ["es", "en"];
 
 export const content = {
@@ -46,7 +37,6 @@ export const content = {
       about: "Sobre mí",
       work: "Experiencia",
       projects: "Proyectos",
-      writing: "Notas",
       cta: "Hablemos",
     },
     hero: {
@@ -306,63 +296,6 @@ export const content = {
         },
       ] as CaseStep[],
     },
-    blog: {
-      eyebrow: "Notas",
-      title: "Notas desde producción.",
-      lede: "Lo que aprendo entregando, condensado en notas cortas. Sin relleno — solo lo que aplico el lunes que viene.",
-      ctaAll: "Todas las notas",
-      // TODO: posts placeholder — escribir articulos reales antes de publicar
-      posts: [
-        {
-          feat: true,
-          cat: "Arquitectura",
-          date: "Mar 2026",
-          read: "8 min",
-          title:
-            "Cuándo usar Server Components (y cuándo no).",
-          excerpt:
-            "Una guía pragmática tras 14 proyectos en App Router. La regla simple que uso para decidir qué capa renderiza qué — sin dogmas. Incluye el caso real del checkout de Sophia donde la decisión fue contraintuitiva.",
-        },
-        {
-          feat: false,
-          cat: "Performance",
-          date: "Feb 2026",
-          read: "5 min",
-          title:
-            "LCP de 6s a 1.2s sin tocar el backend.",
-          excerpt:
-            "Cuatro cambios concretos que movieron Lighthouse de 41 a 98 en una tienda real.",
-        },
-        {
-          feat: false,
-          cat: "Integraciones",
-          date: "Ene 2026",
-          read: "12 min",
-          title: "Conectar Odoo a un agente IA por MCP.",
-          excerpt:
-            "Diseño del bridge, validación de schema, y por qué el audit log importa.",
-        },
-        {
-          feat: false,
-          cat: "DX",
-          date: "Dic 2025",
-          read: "6 min",
-          title: "TypeScript estricto en equipos de 3 a 30.",
-          excerpt:
-            "Las reglas que hacen el strict mode soportable cuando entran devs nuevos.",
-        },
-        {
-          feat: false,
-          cat: "Diseño",
-          date: "Nov 2025",
-          read: "7 min",
-          title:
-            "Design systems que el dev del jueves quiere usar.",
-          excerpt:
-            "Tokens, componentes, y la diferencia entre librería y sistema.",
-        },
-      ] as Post[],
-    },
     contact: {
       eyebrow: "Contacto",
       title: "Hablemos de lo que quieres construir.",
@@ -405,7 +338,6 @@ export const content = {
             { label: "Sobre mí", href: "#about" },
             { label: "Experiencia", href: "#work" },
             { label: "Proyectos", href: "#projects" },
-            { label: "Notas", href: "#writing" },
             { label: "Contacto", href: "#contact" },
           ],
         },
@@ -439,7 +371,6 @@ export const content = {
       about: "About",
       work: "Experience",
       projects: "Work",
-      writing: "Notes",
       cta: "Let's talk",
     },
     hero: {
@@ -699,61 +630,6 @@ export const content = {
         },
       ] as CaseStep[],
     },
-    blog: {
-      eyebrow: "Notes",
-      title: "Notes from production.",
-      lede: "What I learn while shipping, condensed into short notes. No fluff — only what I'll apply next Monday.",
-      ctaAll: "All notes",
-      // TODO: placeholder posts — write real articles before publishing
-      posts: [
-        {
-          feat: true,
-          cat: "Architecture",
-          date: "Mar 2026",
-          read: "8 min",
-          title: "When to use Server Components (and when not to).",
-          excerpt:
-            "A pragmatic guide after 14 projects on App Router. The simple rule I use to decide which layer renders what — no dogma. Includes the real case from Sophia's checkout where the call was counter-intuitive.",
-        },
-        {
-          feat: false,
-          cat: "Performance",
-          date: "Feb 2026",
-          read: "5 min",
-          title: "LCP from 6s to 1.2s without touching the backend.",
-          excerpt:
-            "Four concrete changes that moved Lighthouse from 41 to 98 on a real shop.",
-        },
-        {
-          feat: false,
-          cat: "Integrations",
-          date: "Jan 2026",
-          read: "12 min",
-          title: "Connecting Odoo to an AI agent over MCP.",
-          excerpt:
-            "Bridge design, schema validation, and why audit logs matter.",
-        },
-        {
-          feat: false,
-          cat: "DX",
-          date: "Dec 2025",
-          read: "6 min",
-          title: "Strict TypeScript across teams of 3 to 30.",
-          excerpt:
-            "The rules that make strict mode bearable when new devs join.",
-        },
-        {
-          feat: false,
-          cat: "Design",
-          date: "Nov 2025",
-          read: "7 min",
-          title:
-            "Design systems Thursday's dev actually wants to use.",
-          excerpt:
-            "Tokens, components, and the difference between a library and a system.",
-        },
-      ] as Post[],
-    },
     contact: {
       eyebrow: "Contact",
       title: "Let's talk about what you want to build.",
@@ -796,7 +672,6 @@ export const content = {
             { label: "About", href: "#about" },
             { label: "Experience", href: "#work" },
             { label: "Work", href: "#projects" },
-            { label: "Notes", href: "#writing" },
             { label: "Contact", href: "#contact" },
           ],
         },

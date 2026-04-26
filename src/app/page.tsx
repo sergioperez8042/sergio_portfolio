@@ -10,7 +10,6 @@ import { Experience } from "@/features/experience/Experience";
 import { Tech } from "@/features/tech/Tech";
 import { Works } from "@/features/works/Works";
 import { CaseStudy } from "@/features/case-study/CaseStudy";
-import { Blog } from "@/features/blog/Blog";
 import { Contact } from "@/features/contact/Contact";
 import { Footer } from "@/features/footer/Footer";
 
@@ -29,7 +28,6 @@ export default function Home() {
         <Tech />
         <Works />
         <CaseStudy />
-        <Blog />
         <Contact />
       </main>
       <Footer />

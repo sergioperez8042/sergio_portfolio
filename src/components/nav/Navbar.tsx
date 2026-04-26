@@ -25,7 +25,6 @@ export function Navbar() {
     { id: "about", label: t.nav.about },
     { id: "work", label: t.nav.work },
     { id: "projects", label: t.nav.projects },
-    { id: "writing", label: t.nav.writing },
   ];
 
   return (
