@@ -132,10 +132,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [{ url: "/logo.png", sizes: "any" }],
-    apple: [{ url: "/logo.png", sizes: "180x180" }],
-  },
+  // Icons auto-detected from src/app/icon.svg + apple-icon.svg
   verification: {
     // Add real tokens cuando configures Search Console / Bing
     // google: "verification-token",
