@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/lib/i18n/LangProvider";
 import { SOCIALS, isExternalHref } from "@/data/socials";
+import { Logo } from "@/components/ui/Logo";
 
 function SocialIcons({
   size,
@@ -43,8 +44,11 @@ export function Footer() {
       <div className="max-w-[1280px] mx-auto px-6 sm:px-16 pt-12 sm:pt-16 pb-6 sm:pb-7">
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_repeat(3,1fr)] gap-8 sm:gap-10 md:gap-14 pb-8 sm:pb-12 border-b border-white/[0.06]">
           <div>
-            <div className="text-[17px] sm:text-[18px] font-extrabold tracking-tight mb-3 text-white-100">
-              Sergio Rodríguez
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size={32} />
+              <span className="text-[17px] sm:text-[18px] font-extrabold tracking-tight text-white-100">
+                Sergio Rodríguez
+              </span>
             </div>
             <p className="text-[13.5px] leading-[1.7] text-secondary max-w-[36ch] m-0 mb-5">
               {f.tagline}

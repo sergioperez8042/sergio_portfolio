@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LangProvider";
 import { LangToggle } from "@/components/ui/LangToggle";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const { t } = useTranslation();
@@ -39,17 +40,14 @@ export function Navbar() {
     >
       <a
         href="#hero"
-        className="inline-flex items-center gap-2 group"
+        aria-label="Sergio Rodríguez · Portfolio"
+        className="inline-flex items-center gap-2.5 group"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
           closeMenu();
         }}
       >
-        <span
-          className="w-2 h-2 rounded-full bg-[var(--color-accent)]"
-          style={{ boxShadow: "0 0 12px var(--color-accent)" }}
-          aria-hidden="true"
-        />
+        <Logo size={26} className="transition-transform group-hover:rotate-[8deg]" />
         <span className="font-extrabold text-[16px] tracking-tight text-white-100">
           Sergio
         </span>
