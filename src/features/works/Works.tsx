@@ -20,7 +20,9 @@ function ProjectCard({
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      whileHover={{ y: -4 }}
+      className="glass p-5 rounded-2xl sm:w-[360px] w-full"
+      style={{ boxShadow: "var(--shadow-card)" }}
     >
       <div className="relative w-full h-[230px]">
         <Image
@@ -37,7 +39,7 @@ function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Ver código fuente de ${name} en GitHub`}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center"
+            className="glass w-10 h-10 rounded-full flex justify-center items-center hover:bg-white/10 transition-colors"
           >
             <Github className="w-5 h-5 text-white" aria-hidden="true" />
           </a>

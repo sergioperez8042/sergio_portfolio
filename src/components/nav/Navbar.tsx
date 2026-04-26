@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { styles } from "@/lib/styles";
 import { navLinks } from "@/data/nav";
@@ -19,23 +18,17 @@ export function Navbar() {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
           href="#hero"
-          className="flex items-center gap-2"
+          className="flex items-center"
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
             closeMenu();
           }}
         >
-          <Image
-            src="/logo.png"
-            alt="Logo de Sergio"
-            width={36}
-            height={36}
-            className="object-contain"
-            priority
-          />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Sergio &nbsp;
-            <span className="sm:block hidden"> | Portfolio</span>
+          <p className="text-white-100 text-[18px] font-bold tracking-tight">
+            Sergio
+            <span className="text-secondary font-medium ml-1.5 hidden sm:inline">
+              · Portfolio
+            </span>
           </p>
         </a>
 

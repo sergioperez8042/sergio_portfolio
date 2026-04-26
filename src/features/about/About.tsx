@@ -16,18 +16,18 @@ function ServiceCard({
   return (
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      whileHover={{ y: -4 }}
+      className="xs:w-[250px] w-full glass rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+      style={{ boxShadow: "var(--shadow-card)" }}
     >
-      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-        <Image
-          src={icon}
-          alt={title}
-          width={64}
-          height={64}
-          className="object-contain"
-        />
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-      </div>
+      <Image
+        src={icon}
+        alt={title}
+        width={64}
+        height={64}
+        className="object-contain"
+      />
+      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
     </motion.div>
   );
 }
@@ -36,21 +36,39 @@ export function About() {
   return (
     <SectionWrapper id="about">
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introducción</p>
-        <h2 className={styles.sectionHeadText}>Resumen.</h2>
+        <p className={styles.sectionSubText}>Sobre mí</p>
+        <h2 className={styles.sectionHeadText}>Quién soy.</h2>
       </motion.div>
 
-      <motion.p
+      <motion.div
         variants={fadeIn("none", "tween", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px] space-y-5"
       >
-        💻 Frontend Developer especializado en React, Next.js y React Native.
-        Construyo interfaces funcionales e implemento la lógica de aplicaciones
-        web y móviles. He trabajado en proyectos con Next.js y React Native
-        cubriendo refactorización, gestión de estado global, integración con
-        bases de datos y compilación para Android e iOS, siempre optimizando la
-        experiencia de usuario y la eficiencia del desarrollo.
-      </motion.p>
+        <p>
+          Soy Sergio Rodríguez, Frontend Developer y Project Manager en{" "}
+          <span className="text-white-100 font-medium">
+            Odoo Consulting Group
+          </span>
+          . Trabajo en la intersección entre código y negocio: traduzco
+          requisitos de cliente en arquitectura limpia, gestiono el roadmap del
+          equipo y entrego features que rinden en producción.
+        </p>
+        <p>
+          En los últimos 5 años he desplegado plataformas e-commerce,
+          dashboards operativos, integraciones MCP/Odoo, apps móviles y
+          portales corporativos para sectores como hotelería, fintech, retail y
+          consultoría enterprise.{" "}
+          <span className="text-white-100">
+            Stack principal: TypeScript, React, Next.js, React Native, Flutter,
+            Python/Odoo y Vercel.
+          </span>
+        </p>
+        <p>
+          Si tienes una idea que necesita pasar de prototipo a producto en
+          producción — o un sistema legacy que pide refactor sin romper el
+          negocio — eso es exactamente en lo que trabajo cada día.
+        </p>
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

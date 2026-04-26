@@ -27,7 +27,7 @@ type Particle = {
  */
 export function ParticlesBackground({
   className = "",
-  color = "#a3b8ff",
+  color = "#c5cad4",
   density = 14000,
   linkDistance = 130,
   speed = 0.25,

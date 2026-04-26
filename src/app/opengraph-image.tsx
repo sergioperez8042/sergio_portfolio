@@ -17,7 +17,7 @@ export default function OpengraphImage() {
           justifyContent: "center",
           alignItems: "flex-start",
           background:
-            "linear-gradient(135deg, #050816 0%, #151030 60%, #2a0182 100%)",
+            "linear-gradient(135deg, #0a0a0d 0%, #14151a 60%, #1f2027 100%)",
           color: "#f3f3f3",
           fontFamily: "system-ui, sans-serif",
           padding: "80px",
@@ -39,7 +39,7 @@ export default function OpengraphImage() {
             fontSize: 96,
             fontWeight: 900,
             lineHeight: 1.05,
-            color: "#a3b8ff",
+            color: "#c5cad4",
           }}
         >
           Sergio Rodríguez

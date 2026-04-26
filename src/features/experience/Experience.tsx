@@ -34,7 +34,7 @@ function TimelineCard({
         />
       </span>
       <div
-        className="bg-[#1d1836] rounded-xl p-6 ml-2"
+        className="glass rounded-xl p-6 ml-2"
         style={{ boxShadow: "var(--shadow-card)" }}
       >
         <h3 className="text-white text-[22px] font-bold">{experience.title}</h3>

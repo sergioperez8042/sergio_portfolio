@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const CODE_LINES: { tokens: { text: string; color?: string }[] }[] = [
   {
     tokens: [
-      { text: "const ", color: "#c084fc" },
+      { text: "const ", color: "#dde1e9" },
       { text: "developer ", color: "#f3f3f3" },
       { text: "= ", color: "#aaa6c3" },
       { text: "{", color: "#f3f3f3" },
@@ -40,7 +40,7 @@ const CODE_LINES: { tokens: { text: string; color?: string }[] }[] = [
   {
     tokens: [
       { text: "  building: ", color: "#aaa6c3" },
-      { text: "async ", color: "#c084fc" },
+      { text: "async ", color: "#dde1e9" },
       { text: "() ", color: "#f3f3f3" },
       { text: "=> ", color: "#aaa6c3" },
       { text: "{", color: "#f3f3f3" },
@@ -49,8 +49,8 @@ const CODE_LINES: { tokens: { text: string; color?: string }[] }[] = [
   {
     tokens: [
       { text: "    ", color: "#f3f3f3" },
-      { text: "return ", color: "#c084fc" },
-      { text: "interfaces", color: "#7dd3fc" },
+      { text: "return ", color: "#dde1e9" },
+      { text: "interfaces", color: "#a8b2c0" },
       { text: "(", color: "#f3f3f3" },
       { text: "'web'", color: "#86efac" },
       { text: ", ", color: "#f3f3f3" },
@@ -86,14 +86,14 @@ export function CodeWindow({ className = "" }: { className?: string }) {
       aria-hidden="true"
     >
       {/* Glow detrás */}
-      <div className="absolute -inset-6 bg-[#a3b8ff]/20 rounded-3xl blur-3xl -z-10" />
+      <div className="absolute -inset-6 bg-[#c5cad4]/20 rounded-3xl blur-3xl -z-10" />
 
       <div
         className="rounded-xl overflow-hidden border border-white/10 bg-[#0c0a18]/95 backdrop-blur-xl shadow-2xl"
         style={{
           transform: "rotateY(-4deg) rotateX(2deg)",
           boxShadow:
-            "0 30px 80px -20px rgba(145, 94, 255, 0.35), 0 10px 30px -10px rgba(0, 0, 0, 0.6)",
+            "0 30px 80px -20px rgba(0, 0, 0, 0.35), 0 10px 30px -10px rgba(0, 0, 0, 0.6)",
         }}
       >
         {/* Title bar */}

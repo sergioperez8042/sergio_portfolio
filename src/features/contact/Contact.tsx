@@ -2,7 +2,9 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import { Send } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { GlassButton } from "@/components/ui/GlassButton";
 import { styles } from "@/lib/styles";
 import { slideIn } from "@/lib/motion";
 import { useContactForm } from "./useContactForm";
@@ -20,7 +22,7 @@ export function Contact() {
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+          className="flex-[0.75] glass p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>Contacto</p>
           <h3 className={styles.sectionHeadText}>Hablemos.</h3>
@@ -71,13 +73,13 @@ export function Contact() {
               />
             </label>
 
-            <button
+            <GlassButton
               type="submit"
               disabled={isSubmitting}
-              className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? "Enviando…" : "Enviar"}
-            </button>
+              icon={Send}
+              size="md"
+              label={isSubmitting ? "Enviando…" : "Enviar mensaje"}
+            />
           </form>
         </motion.div>
 

@@ -21,15 +21,19 @@ export function Hero() {
       >
         <div>
           <h1 className={`${styles.heroHeadText} text-white-100`}>
-            Hola, soy{" "}
-            <TypeLoop
-              words={["Sergio", "Developer", "Frontend"]}
-              className="text-[#a3b8ff]"
-            />
+            <span className="block">Hola, soy</span>
+            <span className="block min-h-[1.1em]">
+              <TypeLoop
+                words={["Sergio", "Developer", "Frontend"]}
+                className="text-[#c5cad4]"
+              />
+            </span>
           </h1>
           <p className={`${styles.heroSubText} mt-6 text-secondary max-w-2xl`}>
-            Frontend Developer — creo interfaces y aplicaciones web con React,
-            Next.js y React Native.
+            Convierto ideas en producto que escala. Más de 5 años construyendo
+            aplicaciones web y móviles para startups, fintech, hotelería y
+            consultoras enterprise — desde el prototipo hasta producción en
+            Vercel.
           </p>
         </div>
 

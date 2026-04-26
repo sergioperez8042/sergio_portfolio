@@ -15,7 +15,7 @@ export function Tech() {
             key={tech.name}
             variants={fadeIn("up", "spring", index * 0.05, 0.5)}
             whileHover={{ scale: 1.1, rotate: 6 }}
-            className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-tertiary flex items-center justify-center p-4 cursor-pointer"
+            className="glass w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center p-4 cursor-pointer"
             style={{ boxShadow: "var(--shadow-card)" }}
             title={tech.name}
             aria-label={tech.name}
