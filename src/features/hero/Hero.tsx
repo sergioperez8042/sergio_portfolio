@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="hash-anchor relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden hero-pattern"
+      className="hash-anchor relative min-h-[88vh] sm:min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-20 flex items-center overflow-hidden hero-pattern"
     >
       {/* Layer 0 — partículas (mandato del usuario) */}
       <ParticlesBackground className="absolute inset-0 w-full h-full z-0" />
@@ -34,11 +34,21 @@ export function Hero() {
 
             <h1 className="h1 mt-8 text-white-100">
               <span className="block">{t.hero.line1}</span>
-              <span
-                className="block accent-gradient-text"
-                style={{ minHeight: "1.05em" }}
-              >
-                <Typewriter words={[...t.hero.typeWords]} />
+              {/* Ghost reserva el espacio del peor caso (palabra mas larga) */}
+              <span className="relative block">
+                <span
+                  aria-hidden="true"
+                  className="invisible block"
+                  style={{ visibility: "hidden" }}
+                >
+                  {t.hero.typeWords.reduce(
+                    (a, b) => (b.length > a.length ? b : a),
+                    "",
+                  )}
+                </span>
+                <span className="absolute inset-0 accent-gradient-text">
+                  <Typewriter words={[...t.hero.typeWords]} />
+                </span>
               </span>
             </h1>
 

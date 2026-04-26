@@ -115,9 +115,9 @@ export function Experience() {
   return (
     <section
       id="work"
-      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-16 sm:py-24 lg:py-36"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-20 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-10 lg:gap-20 mt-6">
         <aside className="lg:sticky lg:top-32 self-start reveal">
           <span className="eyebrow">{t.exp.eyebrow}</span>
           <h2 className="h2 mt-4 mb-4 text-white-100">{t.exp.title}</h2>

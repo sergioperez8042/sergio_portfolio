@@ -8,7 +8,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-16 sm:py-24 lg:py-36"
     >
       <div className="reveal">
         <span className="eyebrow">{t.about.eyebrow}</span>
@@ -17,10 +17,10 @@ export function About() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-start mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-10 lg:gap-20 items-start mt-10">
         {/* Photo card */}
         <div
-          className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 reveal"
+          className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 reveal mx-auto lg:mx-0 max-w-[320px] sm:max-w-[360px] lg:max-w-none w-full"
           style={{
             background:
               "linear-gradient(160deg, #1a1b22 0%, #0a0a0d 100%)",

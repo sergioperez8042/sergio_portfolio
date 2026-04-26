@@ -9,7 +9,7 @@ export function CaseStudy() {
   return (
     <section
       id="case-study"
-      className="hash-anchor relative py-24 lg:py-36"
+      className="hash-anchor relative py-16 sm:py-24 lg:py-36"
       style={{
         background:
           "linear-gradient(180deg, var(--color-black-200) 0%, var(--color-primary) 100%)",

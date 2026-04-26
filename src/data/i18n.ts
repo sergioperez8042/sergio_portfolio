@@ -179,7 +179,6 @@ export const content = {
           items: [
             { name: "React Native", slug: "react" },
             { name: "Flutter", slug: "flutter" },
-            { name: "Expo", slug: "expo", hex: "f0f0f5" },
           ],
         },
         {
@@ -580,7 +579,6 @@ export const content = {
           items: [
             { name: "React Native", slug: "react" },
             { name: "Flutter", slug: "flutter" },
-            { name: "Expo", slug: "expo", hex: "f0f0f5" },
           ],
         },
         {

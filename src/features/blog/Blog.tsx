@@ -11,7 +11,7 @@ export function Blog() {
   return (
     <section
       id="writing"
-      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-16 sm:py-24 lg:py-36"
     >
       <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-14 reveal">
         <div>

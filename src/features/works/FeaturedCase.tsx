@@ -17,7 +17,7 @@ export function FeaturedCase() {
     >
       {/* Cover (mock cosmetic shop) */}
       <div
-        className="relative min-h-[360px] p-8 flex flex-col justify-between"
+        className="relative min-h-[300px] sm:min-h-[360px] p-6 sm:p-8 flex flex-col justify-between gap-6"
         style={{
           background:
             "radial-gradient(ellipse at 70% 30%, rgba(232,197,176,0.18), transparent 60%), linear-gradient(135deg, #1a1218 0%, #0a0a0d 100%)",
@@ -80,7 +80,7 @@ export function FeaturedCase() {
       </div>
 
       {/* Content */}
-      <div className="p-10 flex flex-col gap-4">
+      <div className="p-6 sm:p-8 lg:p-10 flex flex-col gap-4">
         <span
           className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.12em] uppercase"
           style={{ color: "var(--color-accent)" }}

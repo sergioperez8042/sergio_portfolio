@@ -10,7 +10,7 @@ export function Tech() {
   const { t } = useTranslation();
   return (
     <section
-      className="relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      className="relative max-w-[1280px] mx-auto px-6 sm:px-16 py-16 sm:py-24 lg:py-36"
       style={{
         background:
           "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 50%, transparent 100%)",
@@ -24,11 +24,11 @@ export function Tech() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-14 reveal">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-10 sm:mt-14 reveal">
         {t.tech.cats.map((cat) => (
           <div
             key={cat.title}
-            className="p-7 rounded-2xl bg-white/[0.025] border border-white/[0.06] backdrop-blur-md"
+            className="p-5 sm:p-7 rounded-2xl bg-white/[0.025] border border-white/[0.06] backdrop-blur-md"
           >
             <h3 className="text-[11px] font-bold tracking-[0.18em] uppercase text-[var(--color-accent)] mb-4">
               {cat.title}

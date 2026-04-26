@@ -22,7 +22,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-16 sm:py-24 lg:py-36"
     >
       <div className="reveal mb-10">
         <span className="eyebrow">{c.eyebrow}</span>
@@ -38,7 +38,7 @@ export function Contact() {
       >
         {/* LEFT */}
         <div
-          className="relative p-10 lg:p-12 lg:border-r"
+          className="relative p-6 sm:p-10 lg:p-12 lg:border-r border-b lg:border-b-0"
           style={{
             background:
               "linear-gradient(160deg, rgba(197,202,212,0.06), transparent 60%)",
@@ -108,7 +108,7 @@ export function Contact() {
         </div>
 
         {/* RIGHT — form */}
-        <div className="p-10 lg:p-12">
+        <div className="p-6 sm:p-10 lg:p-12">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-5"
