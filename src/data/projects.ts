@@ -40,4 +40,17 @@ export const projects: Project[] = [
     sourceCodeLink: "https://github.com/sergioperez8042/colibri_spa",
     liveUrl: "https://colibri-spa.vercel.app",
   },
+  {
+    name: "GDC 2026",
+    description:
+      "Sitio corporativo con Next.js 16 y Tailwind v4 desplegado en Vercel. Server Components, metadata API completa y optimización de Core Web Vitals.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "tailwind", color: "green-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+    ],
+    image: "/projects/gdc2026.png",
+    sourceCodeLink: "https://github.com/sergioperez8042/gdc2026",
+    liveUrl: "https://gdc2026-two.vercel.app",
+  },
 ];
