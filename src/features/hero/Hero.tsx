@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { styles } from "@/lib/styles";
 import { ParticlesBackground } from "@/components/effects/ParticlesBackground";
 import { TypeLoop } from "@/components/effects/TypeLoop";
@@ -10,14 +9,14 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen mx-auto hero-pattern hash-anchor overflow-hidden"
+      className="relative w-full min-h-[60vh] sm:min-h-screen mx-auto hero-pattern hash-anchor overflow-hidden flex items-center"
     >
       {/* Layer 0 — partículas conectadas (icy blue) */}
       <ParticlesBackground className="absolute inset-0 w-full h-full z-0" />
 
       {/* Layer 1 — copy + code window */}
       <div
-        className={`relative z-10 ${styles.paddingX} max-w-7xl mx-auto pt-32 sm:pt-40 pb-32 grid sm:grid-cols-2 gap-10 items-center`}
+        className={`relative z-10 ${styles.paddingX} max-w-7xl mx-auto w-full pt-24 sm:pt-32 pb-12 grid sm:grid-cols-2 gap-10 items-center`}
       >
         <div>
           <h1
@@ -41,27 +40,6 @@ export function Hero() {
         </div>
 
         <CodeWindow className="hidden sm:block" />
-      </div>
-
-      {/* Layer 2 — scroll cue */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center z-20">
-        <a
-          href="#about"
-          aria-label="Ir a la sección Sobre mí"
-          className="block"
-        >
-          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.span
-              animate={{ y: [0, 24, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="block w-3 h-3 rounded-full bg-secondary"
-            />
-          </div>
-        </a>
       </div>
     </section>
   );

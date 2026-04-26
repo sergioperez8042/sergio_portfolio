@@ -9,7 +9,6 @@ export const technologies: Tech[] = [
   { name: "Python", icon: si("python", "c5cad4") },
   { name: "React", icon: si("react", "c5cad4") },
   { name: "Next.js", icon: si("nextdotjs", "f0f0f5") },
-  { name: "React Native", icon: si("react", "c5cad4") },
   { name: "Flutter", icon: si("flutter", "c5cad4") },
   { name: "Tailwind CSS", icon: si("tailwindcss", "c5cad4") },
   { name: "Node.js", icon: si("nodedotjs", "c5cad4") },

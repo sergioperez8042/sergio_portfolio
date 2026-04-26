@@ -10,8 +10,11 @@ function TimelineCard({ experience }: { experience: ExperienceType }) {
   return (
     <li className="relative pl-12 sm:pl-20 pb-12 last:pb-0">
       <span
-        className="absolute left-3 sm:left-7 top-0 flex items-center justify-center w-12 h-12 rounded-full ring-4 ring-primary"
-        style={{ background: experience.iconBg }}
+        className="absolute left-3 sm:left-7 top-0 flex items-center justify-center w-12 h-12 rounded-full"
+        style={{
+          background: experience.iconBg,
+          border: "2px solid #000",
+        }}
         aria-hidden="true"
       >
         <Image
