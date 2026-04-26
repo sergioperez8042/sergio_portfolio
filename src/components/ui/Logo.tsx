@@ -40,8 +40,8 @@ export function Logo({ size = 32, className }: LogoProps) {
           y2="64"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor="#ffffff" stopOpacity="0.18" />
-          <stop offset="1" stopColor="#ffffff" stopOpacity="0.04" />
+          <stop offset="0" stopColor="#1a1b22" />
+          <stop offset="1" stopColor="#0a0a0d" />
         </linearGradient>
         <linearGradient
           id={strokeId}
@@ -51,44 +51,37 @@ export function Logo({ size = 32, className }: LogoProps) {
           y2="64"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor="#ffffff" stopOpacity="1" />
-          <stop offset="1" stopColor="#c5cad4" stopOpacity="0.85" />
+          <stop offset="0" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#c5cad4" />
         </linearGradient>
       </defs>
 
       {/* Tile cristal */}
+      <rect width="64" height="64" rx="14" fill={`url(#${tileId})`} />
       <rect
-        x="2"
-        y="2"
-        width="60"
-        height="60"
+        x="0.5"
+        y="0.5"
+        width="63"
+        height="63"
         rx="14"
-        fill={`url(#${tileId})`}
+        fill="none"
         stroke="#ffffff"
-        strokeOpacity="0.28"
+        strokeOpacity="0.16"
         strokeWidth="1"
       />
 
-      {/* Diagonales de refracción */}
+      {/* Monograma S — bold y legible a 32px */}
       <path
-        d="M2 14 L14 2 M62 50 L50 62"
-        stroke="#ffffff"
-        strokeOpacity="0.18"
-        strokeWidth="1"
-      />
-
-      {/* Monograma S */}
-      <path
-        d="M44 18 L44 15 Q44 12 41 12 L24 12 Q18 12 18 18 L18 27 Q18 33 24 33 L40 33 Q46 33 46 39 L46 49 Q46 52 43 52 L20 52"
+        d="M46 19 Q46 12 39 12 L25 12 Q17 12 17 20 Q17 28 25 28 L39 28 Q47 28 47 36 Q47 44 39 44 L25 44 Q17 44 17 51"
         stroke={`url(#${strokeId})`}
-        strokeWidth="5"
+        strokeWidth="8"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
 
       {/* Punto de marca */}
-      <circle cx="50" cy="14" r="1.6" fill="#c5cad4" />
+      <circle cx="50" cy="14" r="2.4" fill="#c5cad4" />
     </svg>
   );
 }
