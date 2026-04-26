@@ -4,8 +4,8 @@ export const experiences: Experience[] = [
   {
     title: "Frontend Developer & Project Manager",
     companyName: "Odoo Consulting Group (ITConsulting)",
-    icon: "/company/octupus.png",
-    iconBg: "#1a1b22",
+    icon: "/company/itc.jpg",
+    iconBg: "#ffffff",
     date: "Octubre 2024 — Presente",
     points: [
       "Lidero el desarrollo de plataformas web y módulos custom de Odoo 18 para clientes multi-país (España, EAU, LATAM): hotelería, retail, fintech y servicios.",

@@ -38,4 +38,5 @@ export type Project = {
   tags: ProjectTag[];
   image: string;
   sourceCodeLink: string;
+  liveUrl?: string;
 };

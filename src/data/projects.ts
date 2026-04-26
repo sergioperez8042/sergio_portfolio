@@ -4,37 +4,40 @@ export const projects: Project[] = [
   {
     name: "Sophia Cosmetic",
     description:
-      "E-commerce de cosmética construido con Next.js + TypeScript, desplegado en Vercel. Catálogo dinámico, carrito persistente y checkout optimizado para conversión.",
+      "E-commerce de cosmética con Next.js + TypeScript desplegado en Vercel. Catálogo dinámico, carrito persistente y checkout optimizado para conversión.",
     tags: [
       { name: "nextjs", color: "blue-text-gradient" },
       { name: "typescript", color: "green-text-gradient" },
       { name: "vercel", color: "pink-text-gradient" },
     ],
-    image: "/projects/carrent.png",
+    image: "/projects/sophia.png",
     sourceCodeLink: "https://github.com/sergioperez8042/sophia_ecommerce",
+    liveUrl: "https://sophia-cosmetic.vercel.app",
   },
   {
-    name: "MCP Server para Odoo",
+    name: "Mi Viaje",
     description:
-      "Servidor Model Context Protocol que conecta agentes IA con Odoo: gestión de registros, documentos y base de conocimiento. Permite a Claude / Cursor operar Odoo en tiempo real.",
-    tags: [
-      { name: "python", color: "blue-text-gradient" },
-      { name: "mcp", color: "green-text-gradient" },
-      { name: "odoo", color: "pink-text-gradient" },
-    ],
-    image: "/projects/jobit.png",
-    sourceCodeLink: "https://github.com/sergioperez8042/mcp_odoo",
-  },
-  {
-    name: "GDC 2026",
-    description:
-      "Web corporativa con Next.js 16 y Tailwind v4 desplegada en Vercel. Server Components, metadata API completa y optimización de Core Web Vitals.",
+      "Plataforma de planificación de viajes con Next.js y TypeScript. Itinerarios, recomendaciones por destino y experiencia móvil first. Desplegada en Vercel.",
     tags: [
       { name: "nextjs", color: "blue-text-gradient" },
-      { name: "tailwind", color: "green-text-gradient" },
+      { name: "typescript", color: "green-text-gradient" },
       { name: "vercel", color: "pink-text-gradient" },
     ],
-    image: "/projects/tripguide.png",
-    sourceCodeLink: "https://github.com/sergioperez8042/gdc2026",
+    image: "/projects/mi-viaje.png",
+    sourceCodeLink: "https://github.com/sergioperez8042/mi_viaje_web",
+    liveUrl: "https://mi-viaje-web.vercel.app",
+  },
+  {
+    name: "Colibrí Spa",
+    description:
+      "Sitio TypeScript para un spa en producción: reservas, galería y experiencia móvil cuidada. Desplegado en Vercel con edge optimizations.",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "nextjs", color: "green-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+    ],
+    image: "/projects/colibri.png",
+    sourceCodeLink: "https://github.com/sergioperez8042/colibri_spa",
+    liveUrl: "https://colibri-spa.vercel.app",
   },
 ];

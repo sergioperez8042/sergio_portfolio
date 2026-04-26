@@ -1,8 +1,12 @@
 import type { Service } from "./types";
 
+const si = (slug: string, color = "c5cad4") =>
+  `https://cdn.simpleicons.org/${slug}/${color}`;
+
 export const services: Service[] = [
-  { title: "Web Developer", icon: "/services/webdevelopment.png" },
-  { title: "React Developer", icon: "/services/reactjs.png" },
-  { title: "React Native Developer", icon: "/services/reactnative.png" },
-  { title: "Next.js Developer", icon: "/services/nextjsLogo.png" },
+  { title: "Frontend Web", icon: si("html5") },
+  { title: "React / Next.js", icon: si("nextdotjs", "f0f0f5") },
+  { title: "React Native", icon: si("react") },
+  { title: "Flutter", icon: si("flutter") },
+  { title: "Odoo Developer", icon: si("odoo") },
 ];

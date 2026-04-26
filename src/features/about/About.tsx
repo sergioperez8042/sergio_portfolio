@@ -1,33 +1,30 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { styles } from "@/lib/styles";
-import { fadeIn, textVariant } from "@/lib/motion";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 
-function ServiceCard({
-  index,
-  title,
-  icon,
-}: Service & { index: number }) {
+function ServiceCard({ title, icon }: Service) {
   return (
     <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
       whileHover={{ y: -4 }}
-      className="xs:w-[250px] w-full glass rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+      className="xs:w-[220px] w-full glass rounded-[20px] py-8 px-6 min-h-[220px] flex justify-evenly items-center flex-col gap-4"
       style={{ boxShadow: "var(--shadow-card)" }}
     >
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={icon}
         alt={title}
-        width={64}
-        height={64}
+        width={56}
+        height={56}
+        loading="lazy"
         className="object-contain"
       />
-      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <h3 className="text-white-100 text-[18px] font-bold text-center">
+        {title}
+      </h3>
     </motion.div>
   );
 }
@@ -35,15 +32,12 @@ function ServiceCard({
 export function About() {
   return (
     <SectionWrapper id="about">
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>Sobre mí</p>
         <h2 className={styles.sectionHeadText}>Quién soy.</h2>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={fadeIn("none", "tween", 0.1, 1)}
-        className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px] space-y-5"
-      >
+      <div className="mt-6 text-secondary text-[17px] max-w-3xl leading-[30px] space-y-5">
         <p>
           Soy Sergio Rodríguez, Frontend Developer y Project Manager en{" "}
           <span className="text-white-100 font-medium">
@@ -68,11 +62,11 @@ export function About() {
           producción — o un sistema legacy que pide refactor sin romper el
           negocio — eso es exactamente en lo que trabajo cada día.
         </p>
-      </motion.div>
+      </div>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
         ))}
       </div>
     </SectionWrapper>

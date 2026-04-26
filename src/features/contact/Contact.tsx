@@ -1,12 +1,10 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { GlassButton } from "@/components/ui/GlassButton";
 import { styles } from "@/lib/styles";
-import { slideIn } from "@/lib/motion";
 import { useContactForm } from "./useContactForm";
 
 const EarthCanvas = dynamic(() => import("@/components/three/EarthCanvas"), {
@@ -20,10 +18,7 @@ export function Contact() {
   return (
     <SectionWrapper id="contact">
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] glass p-8 rounded-2xl"
-        >
+        <div className="flex-[0.75] glass p-8 rounded-2xl">
           <p className={styles.sectionSubText}>Contacto</p>
           <h3 className={styles.sectionHeadText}>Hablemos.</h3>
 
@@ -81,14 +76,11 @@ export function Contact() {
               label={isSubmitting ? "Enviando…" : "Enviar mensaje"}
             />
           </form>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        >
+        <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
           <EarthCanvas />
-        </motion.div>
+        </div>
       </div>
     </SectionWrapper>
   );
