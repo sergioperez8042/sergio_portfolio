@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUpRight, Github } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LangProvider";
 import { FeaturedCase } from "./FeaturedCase";
@@ -29,9 +30,29 @@ export function Works() {
         {t.works.others.map((p) => (
           <article
             key={p.name}
-            className="relative p-5 rounded-2xl bg-white/[0.025] border border-white/[0.06] flex flex-col gap-3.5 transition-all hover:-translate-y-1 hover:bg-white/[0.045] hover:border-white/[0.18]"
+            className="group relative p-5 rounded-2xl bg-white/[0.025] border border-white/[0.06] flex flex-col gap-3.5 transition-all hover:-translate-y-1 hover:bg-white/[0.045] hover:border-white/[0.18]"
           >
-            <div className={`cv-base ${p.cover}`} aria-hidden="true" />
+            {"image" in p && p.image ? (
+              <div className="relative aspect-[16/10] rounded-xl border border-white/[0.06] overflow-hidden">
+                <Image
+                  src={p.image}
+                  alt={`Captura del proyecto ${p.name}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.45), transparent 60%)",
+                  }}
+                />
+              </div>
+            ) : (
+              <div className={`cv-base ${p.cover}`} aria-hidden="true" />
+            )}
 
             <div className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.04] border border-white/[0.06] text-secondary transition-colors">
               <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
