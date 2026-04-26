@@ -3,8 +3,8 @@ import type { Experience } from "./types";
 export const experiences: Experience[] = [
   {
     title: "Frontend Developer & Project Manager",
-    companyName: "Odoo Consulting Group (ITConsulting)",
-    icon: "/company/itc.jpg",
+    companyName: "ITConsulting Global",
+    icon: "/company/itc.png",
     iconBg: "#ffffff",
     date: "Octubre 2024 — Presente",
     points: [

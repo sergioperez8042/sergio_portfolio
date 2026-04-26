@@ -20,13 +20,16 @@ export function Hero() {
         className={`relative z-10 ${styles.paddingX} max-w-7xl mx-auto pt-32 sm:pt-40 pb-32 grid sm:grid-cols-2 gap-10 items-center`}
       >
         <div>
-          <h1 className={`${styles.heroHeadText} text-white-100`}>
+          <h1
+            className={`${styles.heroHeadText} text-white-100`}
+            style={{ lineHeight: 1.05 }}
+          >
             <span className="block">Hola, soy</span>
-            <span className="block min-h-[1.1em]">
-              <TypeLoop
-                words={["Sergio", "Developer", "Frontend"]}
-                className="text-[#c5cad4]"
-              />
+            <span
+              className="block text-[#c5cad4] whitespace-nowrap"
+              style={{ minHeight: "1.05em" }}
+            >
+              <TypeLoop words={["Sergio", "Developer", "Frontend"]} />
             </span>
           </h1>
           <p className={`${styles.heroSubText} mt-6 text-secondary max-w-2xl`}>
