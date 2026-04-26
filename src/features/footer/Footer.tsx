@@ -1,44 +1,53 @@
-import { Linkedin, Github } from "lucide-react";
+"use client";
 
-const socials = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/sergio-rodríguez-95b6a7231",
-    icon: Linkedin,
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/sergioperez8042",
-    icon: Github,
-  },
-];
+import { useTranslation } from "@/lib/i18n/LangProvider";
 
 export function Footer() {
+  const { t } = useTranslation();
+  const f = t.footer;
   const year = new Date().getFullYear();
 
   return (
-    <footer className="glass text-white-100 py-8 px-6 sm:px-10">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-6 md:flex-row">
-        <p className="text-xl font-bold">Sergio Carlos Rodríguez Pérez</p>
-        <ul className="flex gap-3">
-          {socials.map(({ label, href, icon: Icon }) => (
-            <li key={label}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="glass w-11 h-11 rounded-full flex items-center justify-center text-secondary hover:text-white-100 hover:bg-white/10 transition-colors"
-              >
-                <Icon className="w-5 h-5" aria-hidden="true" />
-              </a>
-            </li>
+    <footer
+      className="border-t border-white/[0.06]"
+      style={{ background: "var(--color-black-200)" }}
+    >
+      <div className="max-w-[1280px] mx-auto px-6 sm:px-16 pt-16 pb-7">
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_repeat(3,1fr)] gap-10 md:gap-14 pb-12 border-b border-white/[0.06]">
+          <div>
+            <div className="text-[18px] font-extrabold tracking-tight mb-3 text-white-100">
+              Sergio Carlos Rodríguez Pérez
+            </div>
+            <p className="text-[13.5px] leading-[1.7] text-secondary max-w-[36ch] m-0">
+              {f.tagline}
+            </p>
+          </div>
+          {f.cols.map((col) => (
+            <div key={col.title}>
+              <h5 className="text-[11px] font-bold tracking-[0.18em] uppercase text-secondary mb-4">
+                {col.title}
+              </h5>
+              <ul className="list-none p-0 m-0 flex flex-col gap-2.5">
+                {col.links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="text-[14px] text-white-100/85 hover:text-white-100 transition-colors"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
+
+        <div className="flex flex-col md:flex-row md:justify-between gap-2 pt-7 text-[12px] text-secondary">
+          <span>{f.copyright}</span>
+          <span>Made in Madrid · Apple-cristal v2</span>
+        </div>
       </div>
-      <p className="mt-6 text-center text-secondary text-sm">
-        &copy; {year} Sergio Carlos Rodríguez Pérez. Todos los derechos reservados.
-      </p>
     </footer>
   );
 }

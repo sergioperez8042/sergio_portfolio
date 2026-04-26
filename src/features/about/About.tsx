@@ -1,79 +1,86 @@
+"use client";
+
 import Image from "next/image";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { styles } from "@/lib/styles";
+import { useTranslation } from "@/lib/i18n/LangProvider";
 
 export function About() {
+  const { t } = useTranslation();
   return (
-    <SectionWrapper id="about">
-      <div>
-        <p className={styles.sectionSubText}>Sobre mí</p>
-        <h2 className={styles.sectionHeadText}>Quién soy.</h2>
+    <section
+      id="about"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+    >
+      <div className="reveal">
+        <span className="eyebrow">{t.about.eyebrow}</span>
+        <h2 className="h2 mt-4 text-white-100 max-w-[24ch]">
+          {t.about.title}
+        </h2>
       </div>
 
-      <div className="mt-10 grid lg:grid-cols-[280px_1fr] gap-10 items-start">
-        {/* Foto con marco glass */}
-        <div className="relative w-full max-w-[280px] mx-auto lg:mx-0">
-          <div
-            className="absolute -inset-4 rounded-[28px] bg-white/[0.04] blur-2xl"
+      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-start mt-12">
+        {/* Photo card */}
+        <div
+          className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 reveal"
+          style={{
+            background:
+              "linear-gradient(160deg, #1a1b22 0%, #0a0a0d 100%)",
+            boxShadow: "var(--shadow-card)",
+          }}
+        >
+          <Image
+            src="/me.png"
+            alt="Foto de Sergio Rodríguez"
+            fill
+            sizes="(max-width: 1024px) 100vw, 380px"
+            className="object-cover"
+            priority
+          />
+          {/* Frame deco */}
+          <span
+            className="absolute top-3 left-3 w-7 h-7 border-l border-t border-[var(--color-accent)] opacity-60"
             aria-hidden="true"
           />
-          <div
-            className="relative glass rounded-3xl p-2 overflow-hidden"
-            style={{ boxShadow: "var(--shadow-card)" }}
-          >
-            <Image
-              src="/me.png"
-              alt="Foto de Sergio Rodríguez"
-              width={280}
-              height={280}
-              priority
-              className="rounded-2xl w-full h-auto object-cover aspect-square"
-            />
-          </div>
-          <div className="mt-4 grid grid-cols-2 gap-2 text-[13px]">
-            <div className="glass rounded-lg px-3 py-2">
-              <div className="text-secondary text-[11px] uppercase tracking-wide">
-                Base
-              </div>
-              <div className="text-white-100">Madrid, ES</div>
-            </div>
-            <div className="glass rounded-lg px-3 py-2">
-              <div className="text-secondary text-[11px] uppercase tracking-wide">
-                Modalidad
-              </div>
-              <div className="text-white-100">Remoto</div>
-            </div>
-          </div>
+          <span
+            className="absolute top-3 right-3 w-7 h-7 border-r border-t border-[var(--color-accent)] opacity-60"
+            aria-hidden="true"
+          />
+          <span
+            className="absolute bottom-3 left-3 w-7 h-7 border-l border-b border-[var(--color-accent)] opacity-60"
+            aria-hidden="true"
+          />
+          <span
+            className="absolute bottom-3 right-3 w-7 h-7 border-r border-b border-[var(--color-accent)] opacity-60"
+            aria-hidden="true"
+          />
+          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[11px] text-secondary tracking-[0.18em] uppercase">
+            {t.about.photoTag}
+          </span>
         </div>
 
-        <div className="text-secondary text-[17px] leading-[30px] space-y-5">
-          <p>
-            Soy <span className="text-white-100 font-medium">Sergio Rodríguez</span>,
-            Frontend Developer y Project Manager en{" "}
-            <span className="text-white-100 font-medium">
-              ITConsulting Global
-            </span>
-            . Trabajo en la intersección entre código y negocio: traduzco
-            requisitos de cliente en arquitectura limpia, gestiono el roadmap
-            del equipo y entrego features que rinden en producción.
-          </p>
-          <p>
-            En los últimos 5 años he desplegado plataformas e-commerce,
-            dashboards operativos, integraciones MCP/Odoo, apps móviles y
-            portales corporativos para sectores como hotelería, fintech, retail
-            y consultoría enterprise.{" "}
-            <span className="text-white-100">
-              Stack principal: TypeScript, React, Next.js, React Native,
-              Flutter, Python/Odoo y Vercel.
-            </span>
-          </p>
-          <p>
-            Si tienes una idea que necesita pasar de prototipo a producto en
-            producción — o un sistema legacy que pide refactor sin romper el
-            negocio — eso es exactamente en lo que trabajo cada día.
-          </p>
+        {/* Bio */}
+        <div className="reveal">
+          {t.about.paragraphs.map((p, i) => (
+            <p
+              key={i}
+              className="text-[17px] leading-[1.75] text-white-100/90 mb-5 max-w-[60ch]"
+              dangerouslySetInnerHTML={{ __html: p }}
+            />
+          ))}
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-7 mt-10 pt-8 border-t border-white/[0.06]">
+            {t.about.meta.map((item) => (
+              <div key={item.lbl}>
+                <div className="text-[10px] tracking-[0.18em] uppercase text-secondary mb-1.5">
+                  {item.lbl}
+                </div>
+                <div className="text-[14px] font-semibold text-white-100">
+                  {item.val}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

@@ -1,39 +1,87 @@
 @import "tailwindcss";
 
+/* ============================================================
+   TOKENS — Apple-cristal v2 (graphite + chrome + icy blue)
+   ============================================================ */
+
 @theme {
-  /* Apple-cristal palette: grafito + chrome + icy blue accent */
   --color-primary: #0a0a0d;
   --color-secondary: #8a8a92;
   --color-tertiary: #14151a;
   --color-black-100: #0f1014;
   --color-black-200: #06070a;
   --color-white-100: #f0f0f5;
+  --color-white: #ffffff;
   --color-accent: #c5cad4;
   --color-accent-soft: #c5cad4;
+  --color-accent-violet: #6b7eff;
+  --color-accent-warm: #e8c5b0;
+
+  --color-success: #86efac;
+  --color-danger: #ff5f56;
+  --color-warning: #ffbd2e;
+  --color-info: #6b7eff;
+
+  --color-line: rgba(255, 255, 255, 0.06);
+  --color-line-strong: rgba(255, 255, 255, 0.1);
+  --color-line-bright: rgba(255, 255, 255, 0.18);
 
   --shadow-card:
     0 30px 80px -20px rgba(0, 0, 0, 0.6),
-    0 10px 30px -10px rgba(197, 202, 212, 0.08),
+    0 10px 30px -10px rgba(197, 202, 212, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-soft:
+    0 12px 40px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
   --breakpoint-xs: 450px;
 
-  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
 }
 
+/* ============================================================
+   BASE
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
   font-family: var(--font-sans);
 }
-
 body {
   background: var(--color-primary);
   color: var(--color-white-100);
-  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Skip-to-content link */
+@media (min-width: 901px) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
 .skip-link {
   position: absolute;
   top: -100px;
@@ -47,96 +95,467 @@ body {
   top: 0;
 }
 
-/* Focus visible */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Anchor offset for fixed nav */
 .hash-anchor {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
-/* Apple-glass surface (frosted) */
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--color-accent);
+  opacity: 0.6;
+}
+
+.h1 {
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  font-size: clamp(48px, 8vw, 96px);
+  margin: 0;
+  text-wrap: balance;
+}
+.h2 {
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  font-size: clamp(36px, 5vw, 60px);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.muted {
+  color: var(--color-secondary);
+}
+
+/* ============================================================
+   GLASS / SURFACES
+   ============================================================ */
+
 .glass {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-line);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
 }
-
 .glass-strong {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.06) 0%,
     rgba(255, 255, 255, 0.02) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-line-strong);
   backdrop-filter: blur(32px) saturate(180%);
   -webkit-backdrop-filter: blur(32px) saturate(180%);
 }
 
-/* Gradients (chrome / silver tone) */
-.black-gradient {
+.chrome-gradient {
   background: linear-gradient(180deg, #1a1b22, #0a0a0d);
 }
-.violet-gradient {
-  background: linear-gradient(
-    180deg,
-    rgba(197, 202, 212, 0.4) 0%,
-    rgba(197, 202, 212, 0) 100%
-  );
-}
-.green-pink-gradient {
-  background: linear-gradient(135deg, #c5cad4 0%, #6b7eff 100%);
-}
-
-/* Text gradients refinados (cool tones) */
-.orange-text-gradient,
-.green-text-gradient,
-.blue-text-gradient,
-.pink-text-gradient {
+.silver-text {
+  background-image: linear-gradient(180deg, #f5f5f7 0%, #c5cad4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.orange-text-gradient {
-  background-image: linear-gradient(180deg, #f5f5f7 0%, #c5cad4 100%);
-}
-.green-text-gradient {
+.icy-text {
   background-image: linear-gradient(180deg, #c5cad4 0%, #6b7eff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
-.blue-text-gradient {
-  background-image: linear-gradient(180deg, #d8dde6 0%, #8a8a92 100%);
-}
-.pink-text-gradient {
-  background-image: linear-gradient(180deg, #ffffff 0%, #c5cad4 100%);
+.accent-gradient-text {
+  background-image: linear-gradient(180deg, var(--color-white-100) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-/* Hero pattern background */
 .hero-pattern {
   background-image:
     radial-gradient(
-      ellipse at top right,
-      rgba(197, 202, 212, 0.08) 0%,
-      transparent 50%
+      ellipse 60% 50% at 80% 20%,
+      rgba(197, 202, 212, 0.1),
+      transparent 60%
     ),
     radial-gradient(
-      ellipse at bottom left,
-      rgba(197, 202, 212, 0.06) 0%,
-      transparent 50%
+      ellipse 50% 50% at 10% 90%,
+      rgba(107, 126, 255, 0.08),
+      transparent 60%
     ),
-    var(--color-primary);
+    linear-gradient(180deg, var(--color-primary) 0%, var(--color-black-200) 100%);
 }
 
-/* Canvas loader */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 30%,
+    black,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 30%,
+    black,
+    transparent 80%
+  );
+}
+
+.hero-orb {
+  position: absolute;
+  pointer-events: none;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(197, 202, 212, 0.15),
+    transparent 60%
+  );
+  filter: blur(60px);
+  animation: orb-float 12s ease-in-out infinite;
+}
+@keyframes orb-float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(-20px);
+  }
+}
+
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ============================================================
+   STATUS PILL
+   ============================================================ */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-line);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
+  backdrop-filter: blur(12px);
+}
+.status-pill .ring {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+  position: relative;
+  box-shadow: 0 0 12px rgba(134, 239, 172, 0.6);
+}
+.status-pill .ring::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(134, 239, 172, 0.4);
+  animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   TYPEWRITER CARET
+   ============================================================ */
+
+.typewriter-caret {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   FLOAT CHIPS
+   ============================================================ */
+
+.float-chip {
+  position: absolute;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(15, 16, 20, 0.85);
+  border: 1px solid var(--color-line-strong);
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-soft);
+  z-index: 3;
+  color: var(--color-white-100);
+}
+.float-chip .ico {
+  color: var(--color-accent);
+}
+.float-a {
+  animation: float-a 6s ease-in-out infinite;
+}
+.float-b {
+  animation: float-b 7s ease-in-out infinite;
+}
+@keyframes float-a {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes float-b {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+
+.marquee-band {
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.015);
+  overflow: hidden;
+  padding: 22px 0;
+}
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  white-space: nowrap;
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  letter-spacing: -0.01em;
+}
+.marquee-item .star {
+  color: var(--color-accent);
+  opacity: 0.5;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================================
+   COVER GRADIENTS (Works small cards)
+   ============================================================ */
+
+.cv-base {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  border: 1px solid var(--color-line);
+  position: relative;
+  overflow: hidden;
+}
+.cv-base::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+}
+.cv-1 {
+  background: linear-gradient(135deg, #1a2030 0%, #0c1018 100%);
+}
+.cv-1::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 30%;
+  border-radius: 8px;
+  background: rgba(197, 202, 212, 0.15);
+  border: 1px solid var(--color-line-strong);
+}
+.cv-2 {
+  background: linear-gradient(135deg, #1a1518 0%, #0c0a0f 100%);
+}
+.cv-2::before {
+  content: "{ }";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 64px;
+  font-weight: 800;
+  color: rgba(197, 202, 212, 0.2);
+}
+.cv-3 {
+  background: linear-gradient(135deg, #0d1f1a 0%, #06100c 100%);
+}
+.cv-3::before {
+  content: "";
+  position: absolute;
+  inset: 20% 15%;
+  background-image: linear-gradient(
+    rgba(197, 202, 212, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 100% 12px;
+}
+.cv-4 {
+  background: linear-gradient(135deg, #2a1820 0%, #100810 100%);
+}
+.cv-4::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 70%;
+  border-radius: 12px;
+  background: rgba(232, 197, 176, 0.15);
+  border: 1px solid var(--color-line-strong);
+}
+.cv-5 {
+  background: linear-gradient(135deg, #1f1a30 0%, #0a081a 100%);
+}
+.cv-5::before {
+  content: "";
+  position: absolute;
+  inset: 25% 20%;
+  background: rgba(155, 166, 255, 0.12);
+  border-radius: 8px;
+  border: 1px solid var(--color-line-strong);
+}
+.cv-6 {
+  background: linear-gradient(135deg, #20251a 0%, #0a0e08 100%);
+}
+.cv-6::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(197, 202, 212, 0.25),
+    transparent 60%
+  );
+}
+
+/* ============================================================
+   SCROLL CUE
+   ============================================================ */
+
+.scroll-cue-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--color-secondary), transparent);
+  animation: cue 2s ease-in-out infinite;
+}
+@keyframes cue {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.6);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* ============================================================
+   CANVAS LOADER (R3F)
+   ============================================================ */
+
 .canvas-loader {
   font-size: 10px;
   width: 1em;
@@ -147,7 +566,6 @@ body {
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
-
 @keyframes mulShdSpin {
   0%,
   100% {

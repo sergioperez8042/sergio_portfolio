@@ -1,88 +1,60 @@
 "use client";
 
-import { useRef, type MouseEvent } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { technologies } from "@/data/tech";
-import type { Tech } from "@/data/types";
+import { useTranslation } from "@/lib/i18n/LangProvider";
+import type { TechItem } from "@/data/i18n";
 
-function TiltBubble({ tech }: { tech: Tech }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  // Spring para suavizar
-  const xSpring = useSpring(x, { stiffness: 200, damping: 20 });
-  const ySpring = useSpring(y, { stiffness: 200, damping: 20 });
-
-  // Mapeo a rotación: cursor a la izquierda → tilt a la izquierda, etc.
-  const rotateX = useTransform(ySpring, [-0.5, 0.5], [28, -28]);
-  const rotateY = useTransform(xSpring, [-0.5, 0.5], [-28, 28]);
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    const rect = ref.current?.getBoundingClientRect();
-    if (!rect) return;
-    const px = (e.clientX - rect.left) / rect.width - 0.5;
-    const py = (e.clientY - rect.top) / rect.height - 0.5;
-    x.set(px);
-    y.set(py);
-  };
-
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        transformPerspective: 700,
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-        boxShadow: "var(--shadow-card)",
-      }}
-      whileHover={{ scale: 1.12, z: 60 }}
-      transition={{ type: "spring", stiffness: 250, damping: 18 }}
-      className="glass relative w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center p-4 cursor-pointer"
-      title={tech.name}
-      aria-label={tech.name}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={tech.icon}
-        alt={tech.name}
-        width={48}
-        height={48}
-        loading="lazy"
-        className="object-contain"
-        style={{ transform: "translateZ(40px)" }}
-      />
-
-      {/* Highlight superior cromo (efecto cristal) */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-3 top-2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
-      />
-    </motion.div>
-  );
-}
+const si = (t: TechItem) =>
+  `https://cdn.simpleicons.org/${t.slug}/${t.hex ?? "c5cad4"}`;
 
 export function Tech() {
+  const { t } = useTranslation();
   return (
-    <SectionWrapper>
-      <div
-        className="flex flex-row flex-wrap justify-center gap-6 sm:gap-8"
-        style={{ perspective: "1000px" }}
-      >
-        {technologies.map((tech) => (
-          <TiltBubble key={tech.name} tech={tech} />
+    <section
+      className="relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+      style={{
+        background:
+          "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 50%, transparent 100%)",
+      }}
+    >
+      <div className="reveal">
+        <span className="eyebrow">{t.tech.eyebrow}</span>
+        <h2 className="h2 mt-4 text-white-100">{t.tech.title}</h2>
+        <p className="text-[15px] leading-[1.7] text-secondary mt-4 max-w-[60ch]">
+          {t.tech.lede}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-14 reveal">
+        {t.tech.cats.map((cat) => (
+          <div
+            key={cat.title}
+            className="p-7 rounded-2xl bg-white/[0.025] border border-white/[0.06] backdrop-blur-md"
+          >
+            <h3 className="text-[11px] font-bold tracking-[0.18em] uppercase text-[var(--color-accent)] mb-4">
+              {cat.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {cat.items.map((tech) => (
+                <span
+                  key={tech.name}
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-[13px] font-medium text-white-100 bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.18] transition-all cursor-default"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={si(tech)}
+                    alt=""
+                    width={16}
+                    height={16}
+                    loading="lazy"
+                    className="object-contain shrink-0"
+                  />
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
-    </SectionWrapper>
+    </section>
   );
 }

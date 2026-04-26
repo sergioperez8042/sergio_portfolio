@@ -1,105 +1,89 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { styles } from "@/lib/styles";
-import { projects } from "@/data/projects";
-import type { Project } from "@/data/types";
-
-function ProjectCard({
-  name,
-  description,
-  tags,
-  image,
-  sourceCodeLink,
-  liveUrl,
-}: Project) {
-  return (
-    <motion.div
-      whileHover={{ y: -4 }}
-      className="glass p-5 rounded-2xl sm:w-[360px] w-full"
-      style={{ boxShadow: "var(--shadow-card)" }}
-    >
-      <div className="relative w-full h-[230px]">
-        <Image
-          src={image}
-          alt={`Captura del proyecto ${name}`}
-          fill
-          sizes="(max-width: 640px) 100vw, 360px"
-          className="object-cover rounded-2xl"
-        />
-
-        <div className="absolute inset-0 flex justify-end items-start gap-2 m-3">
-          {liveUrl ? (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Abrir demo de ${name}`}
-              className="glass w-10 h-10 rounded-full flex justify-center items-center hover:bg-white/10 transition-colors"
-            >
-              <ExternalLink
-                className="w-5 h-5 text-white"
-                aria-hidden="true"
-              />
-            </a>
-          ) : null}
-          <a
-            href={sourceCodeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ver código fuente de ${name} en GitHub`}
-            className="glass w-10 h-10 rounded-full flex justify-center items-center hover:bg-white/10 transition-colors"
-          >
-            <Github className="w-5 h-5 text-white" aria-hidden="true" />
-          </a>
-        </div>
-      </div>
-
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
-      </div>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <p
-            key={`${name}-${tag.name}`}
-            className={`text-[14px] ${tag.color}`}
-          >
-            #{tag.name}
-          </p>
-        ))}
-      </div>
-    </motion.div>
-  );
-}
+import { ArrowUpRight, Github } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/LangProvider";
+import { FeaturedCase } from "./FeaturedCase";
 
 export function Works() {
+  const { t } = useTranslation();
   return (
-    <SectionWrapper>
-      <div>
-        <p className={styles.sectionSubText}>Mi trabajo</p>
-        <h2 className={styles.sectionHeadText}>Proyectos.</h2>
-      </div>
-
-      <div className="w-full flex">
-        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Estos proyectos muestran mis habilidades y experiencia con ejemplos
-          reales. Cada uno incluye una breve descripción con enlaces al
-          repositorio y a la demo. Reflejan mi capacidad para resolver
-          problemas complejos, trabajar con distintas tecnologías y gestionar
-          entregas.
+    <section
+      id="projects"
+      className="hash-anchor relative max-w-[1280px] mx-auto px-6 sm:px-16 py-24 lg:py-36"
+    >
+      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-14 reveal">
+        <div>
+          <span className="eyebrow">{t.works.eyebrow}</span>
+          <h2 className="h2 mt-4 text-white-100">{t.works.title}</h2>
+        </div>
+        <p className="text-[16px] leading-[1.7] text-secondary max-w-[440px]">
+          {t.works.lede}
         </p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} {...project} />
+      <div className="reveal">
+        <FeaturedCase />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
+        {t.works.others.map((p) => (
+          <article
+            key={p.name}
+            className="relative p-5 rounded-2xl bg-white/[0.025] border border-white/[0.06] flex flex-col gap-3.5 transition-all hover:-translate-y-1 hover:bg-white/[0.045] hover:border-white/[0.18]"
+          >
+            <div className={`cv-base ${p.cover}`} aria-hidden="true" />
+
+            <div className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center bg-white/[0.04] border border-white/[0.06] text-secondary transition-colors">
+              <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+            </div>
+
+            <h4 className="text-[18px] font-bold tracking-tight text-white-100 mt-1">
+              {p.name}
+            </h4>
+            <p className="text-[13px] leading-[1.6] text-secondary m-0">
+              {p.desc}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5">
+              {p.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[11px] font-medium px-2 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-white-100/85"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex gap-2 mt-1">
+              {p.liveUrl ? (
+                <a
+                  href={p.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Demo ${p.name}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium glass hover:bg-white/[0.08] transition"
+                >
+                  <ArrowUpRight className="w-3 h-3" aria-hidden="true" />
+                  Demo
+                </a>
+              ) : null}
+              {p.sourceUrl ? (
+                <a
+                  href={p.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Código ${p.name}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium glass hover:bg-white/[0.08] transition"
+                >
+                  <Github className="w-3 h-3" aria-hidden="true" />
+                  Source
+                </a>
+              ) : null}
+            </div>
+          </article>
         ))}
       </div>
-    </SectionWrapper>
+    </section>
   );
 }
