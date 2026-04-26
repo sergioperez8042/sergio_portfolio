@@ -39,7 +39,7 @@ export default function OpengraphImage() {
             fontSize: 96,
             fontWeight: 900,
             lineHeight: 1.05,
-            color: "#915EFF",
+            color: "#a3b8ff",
           }}
         >
           Sergio Rodríguez
