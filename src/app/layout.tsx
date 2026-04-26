@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import { LangProvider } from "@/lib/i18n/LangProvider";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const poppins = localFont({
@@ -222,7 +221,6 @@ export default function RootLayout({
           Saltar al contenido
         </a>
         <LangProvider>
-          <CustomCursor />
           {children}
           <Toaster richColors position="bottom-right" />
         </LangProvider>
