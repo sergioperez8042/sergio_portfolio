@@ -3,6 +3,8 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { styles } from "@/lib/styles";
+import { ParticlesBackground } from "@/components/effects/ParticlesBackground";
+import { TypeLoop } from "@/components/effects/TypeLoop";
 
 const ComputersCanvas = dynamic(
   () => import("@/components/three/ComputersCanvas"),
@@ -13,40 +15,49 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen mx-auto hero-pattern hash-anchor"
+      className="relative w-full h-screen mx-auto hero-pattern hash-anchor overflow-hidden"
     >
-      <div
-        className={`absolute inset-0 top-[120px] ${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
+      {/* Layer 0 — partículas */}
+      <ParticlesBackground className="absolute inset-0 w-full h-full z-0" />
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hola, soy <span className="text-[#915EFF]">Sergio</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Frontend Developer — creo interfaces y <br className="sm:block hidden" />
-            aplicaciones web con React, Next.js y React Native
-          </p>
-        </div>
+      {/* Layer 1 — modelo 3D */}
+      <div className="absolute inset-0 z-10">
+        <ComputersCanvas />
       </div>
 
-      <ComputersCanvas />
+      {/* Layer 2 — copy */}
+      <div
+        className={`relative z-20 ${styles.paddingX} max-w-7xl mx-auto pt-40 sm:pt-48 pointer-events-none`}
+      >
+        <h1 className={`${styles.heroHeadText} text-white`}>
+          Hola, soy{" "}
+          <TypeLoop
+            words={["Sergio", "Developer", "Frontend"]}
+            className="text-[#915EFF]"
+          />
+        </h1>
+        <p className={`${styles.heroSubText} mt-4 text-white-100 max-w-2xl`}>
+          Frontend Developer — creo interfaces y aplicaciones web con React,
+          Next.js y React Native.
+        </p>
+      </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about" aria-label="Ir a la sección Sobre mí">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
+      {/* Layer 3 — scroll cue */}
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center z-20">
+        <a
+          href="#about"
+          aria-label="Ir a la sección Sobre mí"
+          className="block"
+        >
+          <div className="w-9 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.span
               animate={{ y: [0, 24, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="block w-3 h-3 rounded-full bg-secondary"
             />
           </div>
         </a>
