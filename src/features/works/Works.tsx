@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LangProvider";
 import { FeaturedCase } from "./FeaturedCase";
 
@@ -83,18 +83,6 @@ export function Works() {
                 >
                   <ArrowUpRight className="w-3 h-3" aria-hidden="true" />
                   Demo
-                </a>
-              ) : null}
-              {p.sourceUrl ? (
-                <a
-                  href={p.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Código ${p.name}`}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium glass hover:bg-white/[0.08] transition"
-                >
-                  <Github className="w-3 h-3" aria-hidden="true" />
-                  Source
                 </a>
               ) : null}
             </div>

@@ -214,6 +214,14 @@ export const content = {
       },
       others: [
         {
+          name: "Global Distribuidora & Comercializadora",
+          desc: "Sitio corporativo bilingüe (ES/EN) para importadora de café premium y alimentos. App Router con i18n por ruta, animaciones cuidadas y galería de productos.",
+          tags: ["Next.js 16", "Tailwind v4", "i18n", "Vercel"],
+          image: "/projects/gdc2026.jpg",
+          liveUrl: "https://gdc2026-two.vercel.app",
+          sourceUrl: "https://github.com/sergioperez8042/gdc2026",
+        },
+        {
           name: "Mi Viaje",
           desc: "Plataforma de planificación de viajes. Itinerarios, recomendaciones por destino y experiencia móvil-first.",
           tags: ["Next.js", "TypeScript", "Vercel"],
@@ -547,6 +555,14 @@ export const content = {
         sourceUrl: "https://github.com/sergioperez8042/sophia_ecommerce",
       },
       others: [
+        {
+          name: "Global Distribuidora & Comercializadora",
+          desc: "Bilingual (ES/EN) corporate site for a premium coffee and food importer. App Router with route-based i18n, polished animations and a product gallery.",
+          tags: ["Next.js 16", "Tailwind v4", "i18n", "Vercel"],
+          image: "/projects/gdc2026.jpg",
+          liveUrl: "https://gdc2026-two.vercel.app",
+          sourceUrl: "https://github.com/sergioperez8042/gdc2026",
+        },
         {
           name: "Mi Viaje",
           desc: "Travel planning platform with itineraries, destination recommendations and a mobile-first experience.",
