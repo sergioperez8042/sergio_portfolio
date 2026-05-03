@@ -84,12 +84,28 @@ Después de añadirlas → **Redeploy** la rama `main` para que las recoja.
 La `Public Key` queda visible en el bundle del cliente — es así por diseño de
 EmailJS. Para evitar abuso desde otros dominios:
 
-1. **Account** → **Security** → **Allowed Domains** → añade:
-   - `localhost` (dev)
-   - `sergiorp.com` (prod)
-   - `sergio-portfolio-five.vercel.app` (preview/staging)
+1. Entra a https://dashboard.emailjs.com/admin/account → pestaña **Security**.
+2. En **Allowed Origins** (antes "Allowed Domains") añade un origin por línea
+   (sin `https://`, sin barra final):
 
-EmailJS bloqueará envíos desde dominios no listados.
+   ```
+   localhost
+   sergiorp.com
+   www.sergiorp.com
+   ```
+
+3. **Save**.
+
+> ⚠️ **Sobre los previews de Vercel:** las URLs `*-<hash>-<scope>.vercel.app`
+> cambian con cada deploy, así que no se puede listarlas estáticamente. Si
+> quieres testear el form en una preview, añade temporalmente la URL exacta
+> de esa preview a Allowed Origins y bórrala después. Para QA recurrente,
+> mejor un alias estable en Vercel (`Settings → Domains → Branch Deployment URL`)
+> y añadir ese alias a EmailJS.
+
+EmailJS bloqueará con 403 cualquier envío desde un origin no listado — si tu
+form devuelve "Algo salió mal" en producción, lo primero que hay que mirar es
+esta lista.
 
 ---
 
