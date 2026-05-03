@@ -25,7 +25,7 @@ LinkedIn no permite que el banner se suba programáticamente sin disparar verifi
 4. Crop completo (LinkedIn lo pone en zona safe automáticamente)
 5. Aplicar → Guardar
 
-> El banner ya está deployed también en `https://sergio-portfolio-five.vercel.app/linkedin/banner.png` por si necesitas descargarlo desde otro dispositivo.
+> El banner ya está deployed también en `https://sergiorp.com/linkedin/banner.png` por si necesitas descargarlo desde otro dispositivo.
 
 ---
 
@@ -83,7 +83,7 @@ Pin estos 4 en orden:
 
 | # | URL | Título | Descripción corta |
 |---|---|---|---|
-| 1 | `https://sergio-portfolio-five.vercel.app` (o el dominio nuevo cuando lo tengas) | Portfolio v2 · Apple-cristal | Frontend Developer & PM · 5+ años · 30+ proyectos |
+| 1 | `https://sergiorp.com` | Portfolio v2 · Apple-cristal | Frontend Developer & PM · 5+ años · 30+ proyectos |
 | 2 | `https://sophia-cosmetic.vercel.app` | Caso de estudio: Sophia Cosmetic | +118% conversión en checkout · LCP 1.2s · 98 Lighthouse |
 | 3 | `https://gdc2026-two.vercel.app` | GDC 2026 — Bilingüe ES/EN | Sitio corporativo Next.js 16 + i18n + Tailwind v4 |
 | 4 | (subir PDF directo) | CV — Sergio Rodríguez | `/Users/sergio/Projects/sergio_portfolio/public/sergio-rodriguez-cv.pdf` |
@@ -125,7 +125,7 @@ Cuando añadas EN, te pedirá la versión EN del Headline y About:
 
 **Headline EN** (220 chars):
 ```
-Frontend Developer & Project Manager @ ITConsulting Global | Next.js · React · TypeScript · React Native · Odoo · MCP | Building product that ships (5+ yrs · Spain · UAE · LATAM)
+Frontend Developer & Project Manager @ ITConsulting Global | Next.js · React · TypeScript · React Native · Odoo | Building product that ships (5+ yrs · Spain · UAE · LATAM)
 ```
 
 **About EN** (1.940 chars):
@@ -163,7 +163,7 @@ that's exactly what I work on every day.
 
 Available for new projects starting Q2 2026.
 
-→ Portfolio: sergio-portfolio-five.vercel.app
+→ Portfolio: sergiorp.com
 → Let's talk: 8042sergi@gmail.com
 ```
 

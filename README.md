@@ -42,7 +42,7 @@ Plantilla en [`env.local.example`](./env.local.example). Copiar a `.env.local` (
 | `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | EmailJS service ID (cliente) |
 | `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | EmailJS template ID (cliente) |
 | `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | EmailJS public key (cliente, restringe dominio en el dashboard) |
-| `NEXT_PUBLIC_SITE_URL` | URL canónica del sitio para metadata + OG (ej. `https://sergio-portfolio.vercel.app`) |
+| `NEXT_PUBLIC_SITE_URL` | URL canónica del sitio para metadata + OG (ej. `https://sergiorp.com`) |
 
 En Vercel: añadir las cuatro vía `vercel env add` o desde el dashboard (Production + Preview + Development).
 

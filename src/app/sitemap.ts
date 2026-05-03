@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sergio-portfolio.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://sergiorp.com";
 
 const sections = [
   "",

@@ -86,8 +86,8 @@ EmailJS. Para evitar abuso desde otros dominios:
 
 1. **Account** → **Security** → **Allowed Domains** → añade:
    - `localhost` (dev)
-   - `sergio-portfolio.vercel.app` (prod)
-   - tu dominio custom si lo tienes (ej. `sergiorodriguez.dev`)
+   - `sergiorp.com` (prod)
+   - `sergio-portfolio-five.vercel.app` (preview/staging)
 
 EmailJS bloqueará envíos desde dominios no listados.
 
@@ -108,7 +108,7 @@ El portfolio envía las siguientes variables (definidas en
 | `{{message}}` | el mensaje del usuario (multilinea) |
 | `{{intent}}` | `Producto nuevo` / `Refactor / migración` / `Equipo / fractional` / `Solo charlar` / `Sin especificar` |
 | `{{sent_at}}` | `lunes, 26 de abril de 2026, 14:32` |
-| `{{site_url}}` | `https://sergio-portfolio.vercel.app` |
+| `{{site_url}}` | `https://sergiorp.com` |
 
 ---
 
