@@ -52,7 +52,7 @@ export const content = {
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Descargar CV",
       meta: [
-        { num: "5", plus: "+", lbl: "años en producción" },
+        { num: "5", plus: "+", lbl: "años de experiencia" },
         { num: "30", plus: "+", lbl: "proyectos entregados" },
         { num: "3", plus: "", lbl: "regiones (ES · EAU · LATAM)" },
         { num: "98", plus: "", lbl: "Lighthouse promedio" },
@@ -408,7 +408,7 @@ export const content = {
       ctaPrimary: "See work",
       ctaSecondary: "Download CV",
       meta: [
-        { num: "5", plus: "+", lbl: "years in production" },
+        { num: "5", plus: "+", lbl: "years of experience" },
         { num: "30", plus: "+", lbl: "projects shipped" },
         { num: "3", plus: "", lbl: "regions (ES · UAE · LATAM)" },
         { num: "98", plus: "", lbl: "average Lighthouse" },
