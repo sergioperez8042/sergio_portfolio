@@ -63,7 +63,6 @@ export const content = {
       "React · Next.js · TypeScript",
       "React Native · Flutter",
       "Odoo · Python",
-      "MCP Integrations",
       "Design Systems",
       "Vercel ship-fast",
       "Three.js · WebGL",
@@ -195,7 +194,7 @@ export const content = {
     works: {
       eyebrow: "Trabajos seleccionados",
       title: "Proyectos seleccionados.",
-      lede: "Una muestra de lo que he entregado recientemente — desde plataformas e-commerce hasta integraciones MCP/Odoo.",
+      lede: "Una muestra de lo que he entregado recientemente — desde plataformas e-commerce hasta integraciones Odoo.",
       featured: {
         tag: "Caso destacado",
         title: "Sophia Cosmetic — el e-commerce que duplicó la conversión.",
@@ -405,7 +404,6 @@ export const content = {
       "React · Next.js · TypeScript",
       "React Native · Flutter",
       "Odoo · Python",
-      "MCP Integrations",
       "Design Systems",
       "Vercel ship-fast",
       "Three.js · WebGL",
@@ -537,7 +535,7 @@ export const content = {
     works: {
       eyebrow: "Selected work",
       title: "Selected projects.",
-      lede: "A taste of what I've shipped recently — from e-commerce platforms to MCP / Odoo integrations.",
+      lede: "A taste of what I've shipped recently — from e-commerce platforms to Odoo integrations.",
       featured: {
         tag: "Featured case",
         title: "Sophia Cosmetic — the e-commerce that doubled conversion.",
