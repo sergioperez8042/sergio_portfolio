@@ -73,8 +73,8 @@ export const content = {
       title: "De requisitos de cliente a código que rinde.",
       photoTag: "2026",
       paragraphs: [
-        "Trabajo en la intersección entre <b>código y negocio</b>. Lidero el roadmap del equipo en <b>ITConsulting Global</b> y entrego features que rinden en producción — no demos bonitas, código que aguanta el tráfico real.",
-        "En los últimos 5 años he desplegado plataformas e-commerce, dashboards operativos, integraciones MCP/Odoo, apps móviles y portales corporativos para sectores como <b>hotelería, fintech, retail y consultoría enterprise</b> en España, EAU y LATAM.",
+        "Trabajo en la intersección entre <b>código y negocio</b>. Lidero proyectos en <b>ITConsulting Global</b> — consultora <b>Odoo Partner</b> que integra ERP, desarrolla módulos custom y entrega apps web y móviles para clientes en <b>EE.UU., España y Centroamérica</b>.",
+        "En los últimos 5 años he entregado <b>implementaciones Odoo end-to-end</b>, desarrollos de módulos custom, <b>apps Flutter y React Native</b>, sitios <b>Next.js</b> integrados con ERP/CRM y portales corporativos. Mi rol cruza Frontend técnico, Project Management y entrega ágil con equipos distribuidos.",
         "Si tienes una idea que necesita pasar de prototipo a producto en producción — o un sistema legacy que pide refactor sin romper el negocio — eso es exactamente en lo que trabajo cada día.",
       ],
       meta: [
@@ -92,17 +92,17 @@ export const content = {
       items: [
         {
           role: "Frontend Developer & Project Manager",
-          company: "ITConsulting Global",
+          company: "ITConsulting Global · Odoo Partner",
           date: "2024 — Presente",
           now: true,
           icon: "/company/itc.png",
           iconBg: "#ffffff",
           points: [
-            "Lidero el equipo frontend en proyectos enterprise: e-commerce, dashboards operativos y portales corporativos.",
-            "Migré la base de Vite/JS a Next.js 16 + RSC + Tailwind v4 — TTI de 4.2s a 1.3s en el portal cliente principal.",
-            "Implementé integraciones MCP/Odoo conectando ERP con frontends React Native; reducción de 40% en tickets de soporte.",
+            "Lidero proyectos en una consultora Odoo Partner con clientes en EE.UU., España y Centroamérica: implementaciones Odoo end-to-end, desarrollo de módulos custom, apps móviles (Flutter / React Native) y sitios integrados a ERP/CRM.",
+            "Levanté el portal cliente principal sobre Next.js 16 + RSC + Tailwind v4 — TTI de 4.2s a 1.3s y Lighthouse 98.",
+            "Frontends React/React Native conectados a Odoo vía APIs REST — features que rinden en producción y reducción medible de tickets de soporte tras automatizar flujos del ERP.",
           ],
-          chips: ["Next.js", "TypeScript", "Odoo", "MCP", "Vercel"],
+          chips: ["Odoo", "Next.js", "TypeScript", "React Native", "Flutter", "ERP"],
         },
         {
           role: "Next.js Developer",
@@ -415,8 +415,8 @@ export const content = {
       title: "From client requirements to code that performs.",
       photoTag: "2026",
       paragraphs: [
-        "I work at the intersection of <b>code and business</b>. I lead the team's roadmap at <b>ITConsulting Global</b> and ship features that perform in production — not pretty demos, code that holds under real traffic.",
-        "Over the last 5 years I've shipped e-commerce platforms, ops dashboards, MCP/Odoo integrations, mobile apps and corporate portals across <b>hospitality, fintech, retail and enterprise consulting</b> in Spain, the UAE and LATAM.",
+        "I work at the intersection of <b>code and business</b>. I lead projects at <b>ITConsulting Global</b> — an <b>Odoo Partner</b> consultancy that integrates ERP, develops custom modules and delivers web and mobile apps for clients across <b>the U.S., Spain and Central America</b>.",
+        "Over the last 5 years I've shipped <b>end-to-end Odoo implementations</b>, custom modules, <b>Flutter and React Native apps</b>, <b>Next.js</b> sites integrated with ERP/CRM and corporate portals. My role spans Frontend engineering, Project Management and agile delivery with distributed teams.",
         "If you have an idea that needs to move from prototype to production — or a legacy system asking for a refactor without breaking the business — that's exactly what I do every day.",
       ],
       meta: [
@@ -434,17 +434,17 @@ export const content = {
       items: [
         {
           role: "Frontend Developer & Project Manager",
-          company: "ITConsulting Global",
+          company: "ITConsulting Global · Odoo Partner",
           date: "2024 — Present",
           now: true,
           icon: "/company/itc.png",
           iconBg: "#ffffff",
           points: [
-            "Lead the frontend team across enterprise projects: e-commerce, ops dashboards and corporate portals.",
-            "Migrated the codebase from Vite/JS to Next.js 16 + RSC + Tailwind v4 — TTI from 4.2s to 1.3s on the main client portal.",
-            "Shipped MCP/Odoo integrations connecting ERP to React Native frontends; 40% drop in support tickets.",
+            "Lead projects at an Odoo Partner consultancy serving clients in the U.S., Spain and Central America: end-to-end Odoo implementations, custom module development, mobile apps (Flutter / React Native) and ERP/CRM-integrated websites.",
+            "Built the main client portal on Next.js 16 + RSC + Tailwind v4 — TTI from 4.2s to 1.3s, Lighthouse 98.",
+            "React / React Native frontends connected to Odoo via REST APIs — features that perform in production and measurable drop in support tickets after automating ERP flows.",
           ],
-          chips: ["Next.js", "TypeScript", "Odoo", "MCP", "Vercel"],
+          chips: ["Odoo", "Next.js", "TypeScript", "React Native", "Flutter", "ERP"],
         },
         {
           role: "Next.js Developer",
