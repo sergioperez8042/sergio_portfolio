@@ -111,7 +111,7 @@ export function Navbar() {
             exit={{ opacity: 0, y: -8, scale: 0.96 }}
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: "top right" }}
-            className="lg:hidden glass absolute top-16 right-4 min-w-[200px] z-10 rounded-2xl p-3 shadow-2xl"
+            className="lg:hidden glass absolute top-16 right-4 min-w-[240px] max-w-[calc(100vw-2rem)] z-10 rounded-2xl p-3 shadow-2xl"
           >
             <motion.ul
               initial="hidden"
@@ -159,7 +159,7 @@ export function Navbar() {
                 <a
                   href="#contact"
                   onClick={closeMenu}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-semibold bg-white-100 text-primary"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-semibold bg-white-100 text-[var(--color-primary)]"
                 >
                   {t.nav.cta}
                   <ArrowUpRight className="w-3 h-3" aria-hidden="true" />
