@@ -18,7 +18,7 @@ export const SOCIALS = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/sergio-rodríguez-95b6a7231",
+    href: "https://www.linkedin.com/in/sergio-rp-dev",
     icon: Linkedin,
   },
   {

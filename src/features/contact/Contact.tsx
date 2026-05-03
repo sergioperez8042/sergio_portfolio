@@ -88,7 +88,7 @@ export function Contact() {
 
             <div className="flex gap-2 mt-7">
               <a
-                href="https://www.linkedin.com/in/sergio-rodríguez-95b6a7231"
+                href="https://www.linkedin.com/in/sergio-rp-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={c.socials.linkedin}

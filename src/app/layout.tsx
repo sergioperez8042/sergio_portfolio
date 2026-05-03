@@ -176,7 +176,7 @@ const personSchema = {
     addressCountry: "ES",
   },
   sameAs: [
-    "https://www.linkedin.com/in/sergio-rodríguez-95b6a7231",
+    "https://www.linkedin.com/in/sergio-rp-dev",
     "https://github.com/sergioperez8042",
   ],
 };

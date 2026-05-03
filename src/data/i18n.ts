@@ -369,7 +369,7 @@ export const content = {
             { label: "GitHub", href: "https://github.com/sergioperez8042" },
             {
               label: "LinkedIn",
-              href: "https://www.linkedin.com/in/sergio-rodríguez-95b6a7231",
+              href: "https://www.linkedin.com/in/sergio-rp-dev",
             },
             { label: "Email", href: "mailto:8042sergi@gmail.com" },
           ],
@@ -725,7 +725,7 @@ export const content = {
             { label: "GitHub", href: "https://github.com/sergioperez8042" },
             {
               label: "LinkedIn",
-              href: "https://www.linkedin.com/in/sergio-rodríguez-95b6a7231",
+              href: "https://www.linkedin.com/in/sergio-rp-dev",
             },
             { label: "Email", href: "mailto:8042sergi@gmail.com" },
           ],
